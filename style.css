@@ -111,9 +111,9 @@ body {
   position: relative;
 }
 
-.nav-link:hover {
-  border-bottom: #f13d79 2px solid;
-  transition: width 0.3s ease;
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .navbar.scrolled .nav-link {
