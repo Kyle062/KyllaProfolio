@@ -1208,3 +1208,233 @@ body {
     font-size: 14px;
   }
 }
+/* Services Section */
+.services-section {
+  padding: 120px 50px;
+  background: linear-gradient(135deg, #f8c5b1 0%, #e8a19f 100%);
+  position: relative;
+}
+
+.services-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-title {
+  font-family: "Playfair Display", serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.services-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 35px 30px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.service-card-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 25px;
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(241, 61, 121, 0.2);
+}
+
+.service-category {
+  margin-bottom: 25px;
+}
+
+.service-category:last-child {
+  margin-bottom: 0;
+}
+
+.service-category h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.service-category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-category li {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: #333;
+  padding-left: 15px;
+  position: relative;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.service-category li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #f13d79;
+  font-weight: bold;
+}
+
+.services-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.pricing-note {
+  max-width: 500px;
+}
+
+.pricing-note strong {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.pricing-note p {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.cta-button {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 18px 35px;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background: #f13d79;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(241, 61, 121, 0.3);
+}
+
+.cta-button .arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 80px 30px;
+  }
+
+  .services-title {
+    font-size: 42px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 30px 25px;
+  }
+
+  .services-footer {
+    flex-direction: column;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .pricing-note {
+    max-width: 100%;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-title {
+    font-size: 36px;
+  }
+
+  .services-subtitle {
+    font-size: 14px;
+  }
+
+  .service-card-title {
+    font-size: 16px;
+  }
+
+  .service-category h4 {
+    font-size: 13px;
+  }
+
+  .service-category li {
+    font-size: 12px;
+  }
+}
