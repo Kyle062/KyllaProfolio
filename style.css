@@ -111,6 +111,11 @@ body {
   position: relative;
 }
 
+.nav-link:hover {
+  border-bottom: #f13d79 2px solid;
+  transition: width 0.3s ease;
+}
+
 .navbar.scrolled .nav-link {
   color: #000;
 }
@@ -143,6 +148,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-cta:hover {
@@ -418,14 +424,12 @@ body {
   object-fit: contain;
   opacity: 0.9;
   transition: all 0.3s ease;
-
 }
 
 .hero-social-footer .social-link:hover img {
   opacity: 1;
   transform: scale(1.1);
 }
-
 
 /* ========== RESPONSIVE FOR HERO SOCIAL FOOTER ========== */
 @media (max-width: 968px) {
