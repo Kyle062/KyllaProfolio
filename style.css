@@ -381,7 +381,7 @@ body {
 /* ========== SOCIAL FOOTER INSIDE HERO ========== */
 .hero-social-footer {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
   right: 0;
   background: rgb(0, 0, 0);
@@ -395,7 +395,6 @@ body {
   flex-wrap: wrap;
   z-index: 2;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  
 }
 
 .hero-social-footer .social-link {
@@ -414,16 +413,19 @@ body {
 }
 
 .hero-social-footer .social-link img {
-  width: 18px;
-  height: 18px;
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
-  transition: opacity 0.3s ease;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+
 }
 
 .hero-social-footer .social-link:hover img {
   opacity: 1;
+  transform: scale(1.1);
 }
+
 
 /* ========== RESPONSIVE FOR HERO SOCIAL FOOTER ========== */
 @media (max-width: 968px) {
