@@ -22,7 +22,7 @@ body {
 .bg-portfolio-text {
   font-family: "Italiana", serif;
   position: absolute;
-  top: 5%;
+  top: 1%;
   left: 49%;
   transform: translateX(-50%);
   font-size: 15rem;
