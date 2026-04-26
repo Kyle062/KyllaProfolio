@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kylla Jen Beron | Portfolio</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -21,10 +21,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="bg-portfolio-text">PORTFOLIO</div>
-
-      <nav class="nav-container" id="navbar">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
         <div class="logo">
           <img
             src="./images/logo.png"
@@ -37,36 +36,37 @@
             class="logo-scrolled"
           />
         </div>
-        <ul class="nav-links">
-          <li><a href="#home" class="active">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <button class="nav-button">Let's Connect</button>
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About Me</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#contact" class="nav-cta">Let's Connect</a></li>
         </ul>
         <div class="hamburger" id="hamburger">
           <span></span>
           <span></span>
           <span></span>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <main class="hero-section" id="home">
-        <div class="hero-image-container">
-          <img
-            src="./images/hero-image.png"
-            alt="Kylla Jen Beron"
-            class="person-img"
-          />
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-bg-text">PORTFOLIO</div>
+
+      <div class="hero-container">
+        <div class="hero-image">
+          <img src="./images/hero-image.png" alt="Kylla Jen Beron" />
         </div>
 
-        <div class="glass-card">
+        <div class="hero-card">
           <div class="welcome-badge">
             <span class="sparkle">✦</span> Welcome to my portfolio!
           </div>
 
-          <div class="card-content">
+          <div class="hero-content">
             <p class="intro-text">Hello, I'm</p>
             <h1 class="main-name">Kylla Jen Beron</h1>
             <p class="description">
@@ -79,748 +79,751 @@
             </p>
 
             <div class="hero-btns">
-              <button class="btn-white">
-                View my works <span class="arrow">›</span>
-              </button>
+              <button class="btn-white">View my works <span>›</span></button>
               <button class="btn-black">Learn more about me</button>
             </div>
           </div>
 
-          <button class="connect-pill">
-            Let's Connect <span class="arrow">→</span>
-          </button>
+          <button class="connect-pill">Let's Connect <span>→</span></button>
         </div>
-      </main>
+      </div>
 
-      <div class="social-footer">
+      <!-- Social Footer Inside Hero -->
+      <div class="hero-social-footer">
         <a
           href="https://www.linkedin.com/in/kylla-jen-beron-409979294/"
           target="_blank"
-          ><img src="./images/links/linkin.png" alt="" />
-          linkedin.com/in/kylla-jen-beron/</a
+          class="social-link"
         >
-        <a href="https://www.instagram.com/itsme_kakaay/" target="_blank"
-          ><img src="./images/links/instagram.png" alt="" />
-          instagram.com/itsme_kakaay/</a
+          <img src="./images/links/linkin.png" alt="LinkedIn" />
+          
+          <span>linkedin.com/in/kylla-jen-beron/</span>
+        </a>
+        <a
+          href="https://www.instagram.com/itsme_kakaay/"
+          target="_blank"
+          class="social-link"
         >
-        <a href="https://www.facebook.com/kyllajen.beron.1" target="_blank"
-          ><img src="./images/links/facebook.png" alt="" />
-          facebook.com/kyllajen.beron.1</a
+          <img src="./images/links/instagram.png" alt="Instagram" />
+          <span>instagram.com/itsme_kakaay/</span>
+        </a>
+        <a
+          href="https://www.facebook.com/kyllajen.beron.1"
+          target="_blank"
+          class="social-link"
         >
+          <img src="./images/links/facebook.png" alt="Facebook" />
+          <span>facebook.com/kyllajen.beron.1</span>
+        </a>
       </div>
+    </section>
 
-      <!-- COMBINED ABOUT + EXPERIENCE + SKILLS SECTION -->
-      <section class="about-experience-section" id="about">
-        <div class="ae-container">
-          <!-- ABOUT ME PART -->
-          <div class="ae-part about-part fade-in">
-            <div class="ae-header">
-              <span class="sparkle-icon">✦</span>
-              <h2>About Me</h2>
-            </div>
-
-            <div class="about-grid">
-              <!-- Left: Text Content -->
-              <div class="about-text">
-                <p class="about-description">
-                  I am a <strong>multidisciplinary designer</strong> focused on
-                  delivering intentional work that translates seamlessly across
-                  any format. By moving freely between visual identity, digital
-                  experiences, print, and development, I ensure your brand
-                  remains consistent no matter where it lives. I do not limit
-                  myself to one discipline. I dedicate myself entirely to your
-                  project's success.
-                </p>
-
-                <div class="skills-tags">
-                  <span class="skill-tag">UX/UI Designer</span>
-                  <span class="skill-tag">Graphic Designer</span>
-                  <span class="skill-tag">Web Designer</span>
-                  <span class="skill-tag">Front-end Developer</span>
-                  <span class="skill-tag">Creative Support</span>
-                </div>
-
-                <div class="stats-container">
-                  <div class="stat-box">
-                    <h3>2+</h3>
-                    <p>Years of Experience</p>
-                  </div>
-                  <div class="stat-divider"></div>
-                  <div class="stat-box">
-                    <h3>30+</h3>
-                    <p>Clients</p>
-                  </div>
-                  <div class="stat-divider"></div>
-                  <div class="stat-box">
-                    <h3>50+</h3>
-                    <p>Projects Done</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Right: Image Card -->
-              <div class="about-image-card">
-                <div class="image-wrapper">
-                  <img
-                    src="./images/aboutmePhoto.png"
-                    alt="Kylla Jen Beron"
-                    class="about-photo"
-                  />
-                </div>
-                <div class="image-details">
-                  <h3>Kylla Jen Beron</h3>
-                  <p class="student-info">BSIT 2nd Year Student</p>
-                  <p class="age-info">20 years old</p>
-                  <p class="location-info">Davao de Oro, Philippines</p>
-                </div>
-              </div>
-            </div>
+    <!-- COMBINED ABOUT + EXPERIENCE + SKILLS SECTION -->
+    <section class="about-experience-section" id="about">
+      <div class="ae-container">
+        <!-- ABOUT ME PART -->
+        <div class="ae-part about-part fade-in">
+          <div class="ae-header">
+            <span class="sparkle-icon">✦</span>
+            <h2>About Me</h2>
           </div>
 
-          <!-- WORK EXPERIENCE PART -->
-          <div class="ae-part experience-part fade-in">
-            <div class="ae-header">
-              <span class="sparkle-icon">✦</span>
-              <h2>Work Experience</h2>
-            </div>
-
-            <div class="experience-timeline">
-              <!-- Experience Card 1 -->
-              <div class="experience-card">
-                <div class="card-header">
-                  <div class="date-range">March 2024 – September 2024</div>
-                  <div class="company">OFW Print & Custom</div>
-                  <div class="job-title">
-                    Graphic Designer
-                    <span class="employment-type">(Part-time)</span>
-                  </div>
-                </div>
-                <ul class="responsibilities">
-                  <li>
-                    Designed print-ready graphics for custom merchandise and
-                    promotional materials
-                  </li>
-                  <li>
-                    Created brand assets including logos, t-shirt designs, and
-                    marketing collaterals
-                  </li>
-                  <li>
-                    Collaborated with clients to translate ideas into
-                    production-ready designs
-                  </li>
-                  <li>
-                    Managed multiple design projects simultaneously under tight
-                    deadlines
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Experience Card 2 -->
-              <div class="experience-card">
-                <div class="card-header">
-                  <div class="date-range">February 2024 – July 2024</div>
-                  <div class="company">PagAsa NGO</div>
-                  <div class="job-title">
-                    Information Manager/Assistant
-                    <span class="employment-type">(Full-time)</span>
-                  </div>
-                </div>
-                <ul class="responsibilities">
-                  <li>
-                    Designed print-ready graphics for custom merchandise and
-                    promotional materials
-                  </li>
-                  <li>
-                    Created brand assets including logos, t-shirt designs, and
-                    marketing collaterals
-                  </li>
-                  <li>
-                    Collaborated with clients to translate ideas into
-                    production-ready designs
-                  </li>
-                  <li>
-                    Managed multiple design projects simultaneously under tight
-                    deadlines
-                  </li>
-                </ul>
-              </div>
-
-              <!-- Experience Card 3 -->
-              <div class="experience-card">
-                <div class="card-header">
-                  <div class="date-range">October 2024 – present</div>
-                  <div class="company">Self-Employed</div>
-                  <div class="job-title">Freelance Design & Development</div>
-                </div>
-                <ul class="responsibilities">
-                  <li>
-                    <strong
-                      >Freelance Multidisciplinary Designer | 2024 –
-                      Present</strong
-                    >
-                    <ul class="nested-list">
-                      <li>
-                        Worked with 50+ clients across startups, small
-                        businesses, and agencies (international and local)
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong
-                      >UX/UI Designer + Frontend Support (Contract) | Blink OPC
-                      International | 2026</strong
-                    >
-                    <ul class="nested-list">
-                      <li>Designed a website for a pineapple company</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>Graphic Designer | 2024 – Present</strong>
-                    <ul class="nested-list">
-                      <li>Created brand assets and assisted lead designer</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- SKILLS & EXPERTISE PART -->
-          <div class="ae-part skills-part fade-in">
-            <div class="ae-header">
-              <span class="sparkle-icon">✦</span>
-              <h2>Skills & Expertise</h2>
-            </div>
-
-            <div class="skills-grid">
-              <!-- Left Card: Skills Categories -->
-              <div class="skills-card">
-                <div class="skill-category">
-                  <h3>UX/UI Design</h3>
-                  <p>
-                    User research · Wireframing · Prototyping · User flows ·
-                    Usability testing · Design systems · Responsive design
-                  </p>
-                </div>
-                <div class="skill-category">
-                  <h3>Graphic Design</h3>
-                  <p>
-                    Brand identity · Logo design · Typography · Print layout ·
-                    Packaging · Social media graphics · Illustration basics
-                  </p>
-                </div>
-                <div class="skill-category">
-                  <h3>Frontend Development</h3>
-                  <p>
-                    HTML5 · CSS3 · JavaScript (basics) · Responsive frameworks ·
-                    Webflow · Version control (Git)
-                  </p>
-                </div>
-                <div class="skill-category">
-                  <h3>Assistant / Support</h3>
-                  <p>
-                    Client communication · Project coordination · File
-                    organization · Design asset management · Meeting notes ·
-                    Timeline tracking
-                  </p>
-                </div>
-              </div>
-
-              <!-- Right Card: Tools -->
-              <div class="tools-card">
-                <h3>Tools I Use</h3>
-                <div class="tools-grid">
-                  <div class="tool-item">
-                    <img src="./images/tools/figma.png" alt="Figma" />
-                    <span>Figma</span>
-                  </div>
-                  <div class="tool-item">
-                    <img src="./images/tools/framer.png" alt="Framer" />
-                    <span>Framer</span>
-                  </div>
-                  <div class="tool-item">
-                    <img
-                      src="./images/tools/photoshop.png"
-                      alt="Adobe Photoshop"
-                    />
-                    <span>Adobe Photoshop</span>
-                  </div>
-                  <div class="tool-item">
-                    <img
-                      src="./images/tools/illustrator.png"
-                      alt="Adobe Illustrator"
-                    />
-                    <span>Adobe Illustrator</span>
-                  </div>
-                  <div class="tool-item">
-                    <img src="./images/tools/canva.png" alt="Canva" />
-                    <span>Canva</span>
-                  </div>
-                  <div class="tool-item">
-                    <img src="./images/tools/capcut.png" alt="Capcut" />
-                    <span>Capcut</span>
-                  </div>
-                  <div class="tool-item">
-                    <img src="./images/tools/github.png" alt="GitHub" />
-                    <span>GitHub</span>
-                  </div>
-                  <div class="tool-item">
-                    <img src="./images/tools/vscode.png" alt="VSCode" />
-                    <span>VSCode</span>
-                  </div>
-                  <div class="tool-item">
-                    <img
-                      src="./images/tools/office.png"
-                      alt="Microsoft Office"
-                    />
-                    <span>Microsoft Office</span>
-                  </div>
-                  <div class="tool-item google-workspace">
-                    <img
-                      src="./images/tools/Google Workspace.png"
-                      alt="Google Workspace"
-                    />
-                    <span>Google Workspace</span>
-                  </div>
-                </div>
-                <div class="others-section">
-                  <strong>Others:</strong> Microsoft Office(Words, Excel) · Dora
-                  AI · Google Workspace · Blender · IbisPaintX · Spline
-                </div>
-              </div>
-            </div>
-
-            <!-- Resume Button -->
-            <div class="resume-button-container">
-              <button class="resume-btn">
-                <img src="./images/tools/pdf.png" alt="PDF" />
-                <span>View my Resume</span>
-                <span class="arrow">›</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PROJECTS SECTION -->
-      <section class="projects-section" id="projects">
-        <div class="projects-container">
-          <!-- Featured Projects -->
-          <div class="featured-projects fade-in">
-            <h2 class="section-title">Featured Projects</h2>
-
-            <div class="featured-grid">
-              <!-- Project 1: DepTrack & IskolarLAD -->
-              <div class="featured-item">
-                <div class="project-mockup">
-                  <img
-                    src="./images/projects/deptrack-iskolarlad.png"
-                    alt="DepTrack & IskolarLAD Login Screens"
-                    class="project-img"
-                  />
-                </div>
-              </div>
-
-              <!-- Project 2: HKHighTech -->
-              <div class="featured-item">
-                <div class="project-mockup">
-                  <img
-                    src="./images/projects/hktech-mockup.png"
-                    alt="HKHighTech Mobile App"
-                    class="project-img"
-                  />
-                </div>
-              </div>
-
-              <!-- Project 3: Premium Philippine Pineapple -->
-              <div class="featured-item">
-                <div class="project-mockup">
-                  <img
-                    src="./images/projects/pineapple-website.png"
-                    alt="Premium Philippine Pineapple Website"
-                    class="project-img"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Projects Categories -->
-          <div class="projects-categories fade-in">
-            <h2 class="section-title2">Projects</h2>
-
-            <div class="categories-grid">
-              <div class="category-card">
-                <div class="category-image">
-                  <img
-                    src="./images/projects/group1.png"
-                    alt="UX/UI Design Projects"
-                  />
-                </div>
-                <h3>UX/UI Design Projects</h3>
-              </div>
-
-              <div class="category-card">
-                <div class="category-image">
-                  <img
-                    src="./images/projects/group1.png"
-                    alt="Graphic Design Projects"
-                  />
-                </div>
-                <h3>Graphic Design Projects</h3>
-              </div>
-
-              <div class="category-card">
-                <div class="category-image">
-                  <img
-                    src="./images/projects/group1.png"
-                    alt="Support/Assistant Works"
-                  />
-                </div>
-                <h3>Support/Assistant Works</h3>
-              </div>
-
-              <div class="category-card">
-                <div class="category-image">
-                  <img
-                    src="./images/projects/group1.png"
-                    alt="Front-end Development Projects"
-                  />
-                </div>
-                <h3>Front-end Development Projects</h3>
-              </div>
-
-              <div class="category-card">
-                <div class="category-image">
-                  <img src="./images/projects/group1.png" alt="Others" />
-                </div>
-                <h3>Others</h3>
-              </div>
-            </div>
-          </div>
-
-          <!-- Quote Section -->
-          <div class="quote-section fade-in">
-            <blockquote class="quote-text">
-              "One designer. Many disciplines."
-            </blockquote>
-            <p class="quote-description">
-              From brand identities to responsive websites and user interfaces —
-              these projects showcase how I bridge design and code. Every piece
-              is built with purpose, collaboration, and attention to detail.
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- SERVICES SECTION -->
-      <section class="services-section" id="services">
-        <div class="services-container">
-          <div class="services-header fade-in">
-            <h2 class="services-title">Services</h2>
-            <p class="services-subtitle">
-              From brand identity to frontend development — I offer end-to-end
-              design solutions. No gaps. No handoff headaches.
-            </p>
-          </div>
-
-          <div class="services-grid">
-            <!-- Service Card 1: Graphic Design / Brand Identity -->
-            <div class="service-card">
-              <h3 class="service-card-title">
-                Graphic Design / Brand Identity
-              </h3>
-
-              <div class="service-category">
-                <h4>Brand Foundations</h4>
-                <ul>
-                  <li>Logo design & variations</li>
-                  <li>Color palette & typography</li>
-                  <li>Brand style guide</li>
-                  <li>Visual identity system</li>
-                </ul>
-              </div>
-
-              <div class="service-category">
-                <h4>Print Materials</h4>
-                <ul>
-                  <li>Business cards & letterheads</li>
-                  <li>Flyers, brochures & posters</li>
-                  <li>Packaging & labels</li>
-                  <li>Menus, catalogs & lookbooks</li>
-                </ul>
-              </div>
-
-              <div class="service-category">
-                <h4>Digital Assets</h4>
-                <ul>
-                  <li>Social media graphics</li>
-                  <li>Presentation decks</li>
-                  <li>Web banners & digital ads</li>
-                </ul>
-              </div>
-
-              <div class="service-category">
-                <h4>Event & Promotional</h4>
-                <ul>
-                  <li>Invitations & tickets</li>
-                  <li>Banners & signage</li>
-                </ul>
-              </div>
-
-              <div class="service-category">
-                <h4>Apparel & Outdoor</h4>
-                <ul>
-                  <li>T-shirts & uniforms</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Service Card 2: UX/UI Design -->
-            <div class="service-card">
-              <h3 class="service-card-title">UX/UI Design</h3>
-
-              <div class="service-category">
-                <h4>User Research & Strategy</h4>
-                <ul>
-                  <li>User research & interviews</li>
-                  <li>Competitor analysis</li>
-                  <li>User personas & journey maps</li>
-                  <li>Information architecture</li>
-                  <li>User flow diagrams</li>
-                </ul>
-              </div>
-
-              <div class="service-category">
-                <h4>Design & Prototyping</h4>
-                <ul>
-                  <li>Wireframing (low & high fidelity)</li>
-                  <li>High-fidelity UI design</li>
-                  <li>Interactive prototypes (Figma)</li>
-                  <li>Responsive design (mobile, tablet, desktop)</li>
-                  <li>Design systems & component libraries</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Service Card 3: Support / Assistant -->
-            <div class="service-card">
-              <h3 class="service-card-title">Support / Assistant</h3>
-
-              <div class="service-category">
-                <h4>Project Coordination</h4>
-                <ul>
-                  <li>Task & deadline tracking</li>
-                  <li>Schedule & meeting coordination</li>
-                  <li>Timeline management</li>
-                  <li>Client communication & follow-ups</li>
-                  <li>Pitch Proposal</li>
-                </ul>
-              </div>
-
-              <div class="service-category">
-                <h4>Asset & File Management</h4>
-                <ul>
-                  <li>Design asset organization</li>
-                  <li>File storage setup (Google Drive, Dropbox, Figma)</li>
-                </ul>
-              </div>
-
-              <div class="service-category">
-                <h4>Design Documentation</h4>
-                <ul>
-                  <li>Style guide documentation</li>
-                  <li>Export & format conversion</li>
-                </ul>
-              </div>
-
-              <div class="service-category">
-                <h4>Feedback & Revision Tracking</h4>
-                <ul>
-                  <li>Client feedback collection & organization</li>
-                  <li>Revision tracking</li>
-                  <li>Quality assurance checks</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Service Card 4: Front-end Development -->
-            <div class="service-card">
-              <h3 class="service-card-title">Front-end Development</h3>
-
-              <div class="service-category">
-                <h4>Website Development</h4>
-                <ul>
-                  <li>Responsive websites (HTML/CSS/JS)</li>
-                  <li>Landing pages & marketing sites</li>
-                  <li>Mobile-first design implementation</li>
-                </ul>
-              </div>
-
-              <div class="service-category">
-                <h4>Components & Interactivity</h4>
-                <ul>
-                  <li>Custom coded components</li>
-                  <li>Interactive elements (hover, click, scroll effects)</li>
-                  <li>Navigation menus & dropdowns</li>
-                  <li>Forms & user input handling</li>
-                </ul>
-              </div>
-
-              <div class="service-category">
-                <h4>Deployment & Support</h4>
-                <ul>
-                  <li>GitHub repository with clean commits</li>
-                  <li>Post-launch support & updates</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="services-footer fade-in">
-            <div class="pricing-note">
-              <strong>Pricing Note:</strong>
-              <p>
-                Every project is unique. Contact me for a custom quote based on
-                your scope, timeline, and budget.
+          <div class="about-grid">
+            <!-- Left: Text Content -->
+            <div class="about-text">
+              <p class="about-description">
+                I am a <strong>multidisciplinary designer</strong> focused on
+                delivering intentional work that translates seamlessly across
+                any format. By moving freely between visual identity, digital
+                experiences, print, and development, I ensure your brand remains
+                consistent no matter where it lives. I do not limit myself to
+                one discipline. I dedicate myself entirely to your project's
+                success.
               </p>
+
+              <div class="skills-tags">
+                <span class="skill-tag">UX/UI Designer</span>
+                <span class="skill-tag">Graphic Designer</span>
+                <span class="skill-tag">Web Designer</span>
+                <span class="skill-tag">Front-end Developer</span>
+                <span class="skill-tag">Creative Support</span>
+              </div>
+
+              <div class="stats-container">
+                <div class="stat-box">
+                  <h3>2+</h3>
+                  <p>Years of Experience</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-box">
+                  <h3>30+</h3>
+                  <p>Clients</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-box">
+                  <h3>50+</h3>
+                  <p>Projects Done</p>
+                </div>
+              </div>
             </div>
-            <button class="cta-button">
-              Let's talk about your project
-              <span class="arrow">→</span>
+
+            <!-- Right: Image Card -->
+            <div class="about-image-card">
+              <div class="image-wrapper">
+                <img
+                  src="./images/aboutmePhoto.png"
+                  alt="Kylla Jen Beron"
+                  class="about-photo"
+                />
+              </div>
+              <div class="image-details">
+                <h3>Kylla Jen Beron</h3>
+                <p class="student-info">BSIT 2nd Year Student</p>
+                <p class="age-info">20 years old</p>
+                <p class="location-info">Davao de Oro, Philippines</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WORK EXPERIENCE PART -->
+        <div class="ae-part experience-part fade-in">
+          <div class="ae-header">
+            <span class="sparkle-icon">✦</span>
+            <h2>Work Experience</h2>
+          </div>
+
+          <div class="experience-timeline">
+            <!-- Experience Card 1 -->
+            <div class="experience-card">
+              <div class="card-header">
+                <div class="date-range">March 2024 – September 2024</div>
+                <div class="company">OFW Print & Custom</div>
+                <div class="job-title">
+                  Graphic Designer
+                  <span class="employment-type">(Part-time)</span>
+                </div>
+              </div>
+              <ul class="responsibilities">
+                <li>
+                  Designed print-ready graphics for custom merchandise and
+                  promotional materials
+                </li>
+                <li>
+                  Created brand assets including logos, t-shirt designs, and
+                  marketing collaterals
+                </li>
+                <li>
+                  Collaborated with clients to translate ideas into
+                  production-ready designs
+                </li>
+                <li>
+                  Managed multiple design projects simultaneously under tight
+                  deadlines
+                </li>
+              </ul>
+            </div>
+
+            <!-- Experience Card 2 -->
+            <div class="experience-card">
+              <div class="card-header">
+                <div class="date-range">February 2024 – July 2024</div>
+                <div class="company">PagAsa NGO</div>
+                <div class="job-title">
+                  Information Manager/Assistant
+                  <span class="employment-type">(Full-time)</span>
+                </div>
+              </div>
+              <ul class="responsibilities">
+                <li>
+                  Designed print-ready graphics for custom merchandise and
+                  promotional materials
+                </li>
+                <li>
+                  Created brand assets including logos, t-shirt designs, and
+                  marketing collaterals
+                </li>
+                <li>
+                  Collaborated with clients to translate ideas into
+                  production-ready designs
+                </li>
+                <li>
+                  Managed multiple design projects simultaneously under tight
+                  deadlines
+                </li>
+              </ul>
+            </div>
+
+            <!-- Experience Card 3 -->
+            <div class="experience-card">
+              <div class="card-header">
+                <div class="date-range">October 2024 – present</div>
+                <div class="company">Self-Employed</div>
+                <div class="job-title">Freelance Design & Development</div>
+              </div>
+              <ul class="responsibilities">
+                <li>
+                  <strong
+                    >Freelance Multidisciplinary Designer | 2024 –
+                    Present</strong
+                  >
+                  <ul class="nested-list">
+                    <li>
+                      Worked with 50+ clients across startups, small businesses,
+                      and agencies (international and local)
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong
+                    >UX/UI Designer + Frontend Support (Contract) | Blink OPC
+                    International | 2026</strong
+                  >
+                  <ul class="nested-list">
+                    <li>Designed a website for a pineapple company</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Graphic Designer | 2024 – Present</strong>
+                  <ul class="nested-list">
+                    <li>Created brand assets and assisted lead designer</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- SKILLS & EXPERTISE PART -->
+        <div class="ae-part skills-part fade-in">
+          <div class="ae-header">
+            <span class="sparkle-icon">✦</span>
+            <h2>Skills & Expertise</h2>
+          </div>
+
+          <div class="skills-grid">
+            <!-- Left Card: Skills Categories -->
+            <div class="skills-card">
+              <div class="skill-category">
+                <h3>UX/UI Design</h3>
+                <p>
+                  User research · Wireframing · Prototyping · User flows ·
+                  Usability testing · Design systems · Responsive design
+                </p>
+              </div>
+              <div class="skill-category">
+                <h3>Graphic Design</h3>
+                <p>
+                  Brand identity · Logo design · Typography · Print layout ·
+                  Packaging · Social media graphics · Illustration basics
+                </p>
+              </div>
+              <div class="skill-category">
+                <h3>Frontend Development</h3>
+                <p>
+                  HTML5 · CSS3 · JavaScript (basics) · Responsive frameworks ·
+                  Webflow · Version control (Git)
+                </p>
+              </div>
+              <div class="skill-category">
+                <h3>Assistant / Support</h3>
+                <p>
+                  Client communication · Project coordination · File
+                  organization · Design asset management · Meeting notes ·
+                  Timeline tracking
+                </p>
+              </div>
+            </div>
+
+            <!-- Right Card: Tools -->
+            <div class="tools-card">
+              <h3>Tools I Use</h3>
+              <div class="tools-grid">
+                <div class="tool-item">
+                  <img src="./images/tools/figma.png" alt="Figma" />
+                  <span>Figma</span>
+                </div>
+                <div class="tool-item">
+                  <img src="./images/tools/framer.png" alt="Framer" />
+                  <span>Framer</span>
+                </div>
+                <div class="tool-item">
+                  <img
+                    src="./images/tools/photoshop.png"
+                    alt="Adobe Photoshop"
+                  />
+                  <span>Adobe Photoshop</span>
+                </div>
+                <div class="tool-item">
+                  <img
+                    src="./images/tools/illustrator.png"
+                    alt="Adobe Illustrator"
+                  />
+                  <span>Adobe Illustrator</span>
+                </div>
+                <div class="tool-item">
+                  <img src="./images/tools/canva.png" alt="Canva" />
+                  <span>Canva</span>
+                </div>
+                <div class="tool-item">
+                  <img src="./images/tools/capcut.png" alt="Capcut" />
+                  <span>Capcut</span>
+                </div>
+                <div class="tool-item">
+                  <img src="./images/tools/github.png" alt="GitHub" />
+                  <span>GitHub</span>
+                </div>
+                <div class="tool-item">
+                  <img src="./images/tools/vscode.png" alt="VSCode" />
+                  <span>VSCode</span>
+                </div>
+                <div class="tool-item">
+                  <img src="./images/tools/office.png" alt="Microsoft Office" />
+                  <span>Microsoft Office</span>
+                </div>
+                <div class="tool-item google-workspace">
+                  <img
+                    src="./images/tools/Google Workspace.png"
+                    alt="Google Workspace"
+                  />
+                  <span>Google Workspace</span>
+                </div>
+              </div>
+              <div class="others-section">
+                <strong>Others:</strong> Microsoft Office(Words, Excel) · Dora
+                AI · Google Workspace · Blender · IbisPaintX · Spline
+              </div>
+            </div>
+          </div>
+
+          <!-- Resume Button -->
+          <div class="resume-button-container">
+            <button class="resume-btn">
+              <img src="./images/tools/pdf.png" alt="PDF" />
+              <span>View my Resume</span>
+              <span class="arrow">›</span>
             </button>
           </div>
         </div>
-      </section>
-      <!-- CONTACT SECTION -->
-      <section class="contact-section" id="contact">
-        <div class="contact-container">
-          <div class="contact-header fade-in">
-            <h2 class="contact-title">Contact Me!</h2>
-            <p class="contact-subtitle">Let's build something cohesive.</p>
-          </div>
+      </div>
+    </section>
 
-          <div class="contact-form-wrapper">
-            <div class="contact-form-card fade-in">
-              <h3 class="form-heading">Let's work together.</h3>
-              <p class="form-subtitle">
-                Have a project in mind? Questions about a collaboration? I'd
-                love to hear from you.
-              </p>
+    <!-- PROJECTS SECTION -->
+    <section class="projects-section" id="projects">
+      <div class="projects-container">
+        <!-- Featured Projects -->
+        <div class="featured-projects fade-in">
+          <h2 class="section-title">Featured Projects</h2>
 
-              <form class="contact-form" action="#" method="POST">
-                <div class="form-group">
-                  <label for="fullname">Full name</label>
-                  <input
-                    type="text"
-                    id="fullname"
-                    name="fullname"
-                    placeholder="Your full name"
-                    required
-                  />
-                </div>
+          <div class="featured-grid">
+            <!-- Project 1: DepTrack & IskolarLAD -->
+            <div class="featured-item">
+              <div class="project-mockup">
+                <img
+                  src="./images/projects/deptrack-iskolarlad.png"
+                  alt="DepTrack & IskolarLAD Login Screens"
+                  class="project-img"
+                />
+              </div>
+            </div>
 
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="your.email@example.com"
-                    required
-                  />
-                </div>
+            <!-- Project 2: HKHighTech -->
+            <div class="featured-item">
+              <div class="project-mockup">
+                <img
+                  src="./images/projects/hktech-mockup.png"
+                  alt="HKHighTech Mobile App"
+                  class="project-img"
+                />
+              </div>
+            </div>
 
-                <div class="form-group">
-                  <label for="projecttype">Project Type</label>
-                  <select id="projecttype" name="projecttype" required>
-                    <option value="" disabled selected>
-                      Select a project type
-                    </option>
-                    <option value="branding">Branding / Brand Identity</option>
-                    <option value="web">Website Design</option>
-                    <option value="uxui">UX/UI Design</option>
-                    <option value="graphic">Graphic Design</option>
-                    <option value="frontend">Frontend Development</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    placeholder="Tell me about your project..."
-                    required
-                  ></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">SUBMIT</button>
-              </form>
+            <!-- Project 3: Premium Philippine Pineapple -->
+            <div class="featured-item">
+              <div class="project-mockup">
+                <img
+                  src="./images/projects/pineapple-website.png"
+                  alt="Premium Philippine Pineapple Website"
+                  class="project-img"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- FOOTER SECTION -->
-      <footer class="footer-section">
-        <div class="footer-container">
-          <div class="footer-grid">
-            <!-- Left: Brand Info -->
-            <div class="footer-brand">
-              <h3 class="footer-name">Kylla Jen Beron</h3>
-              <p class="footer-title">
-                Multidisciplinary Designer — Graphic Design · UX/UI · Frontend ·
-                Creative Support
-              </p>
-              <p class="footer-tagline">One designer. Many disciplines.</p>
-              <a href="#contact" class="footer-btn"
-                >Let's talk about your project</a
-              >
+        <!-- Projects Categories -->
+        <div class="projects-categories fade-in">
+          <h2 class="section-title2">Projects</h2>
+
+          <div class="categories-grid">
+            <div class="category-card">
+              <div class="category-image">
+                <img
+                  src="./images/projects/group1.png"
+                  alt="UX/UI Design Projects"
+                />
+              </div>
+              <h3>UX/UI Design Projects</h3>
             </div>
 
-            <!-- Middle: Quick Links -->
-            <div class="footer-links">
-              <h4 class="footer-heading">Quick Links</h4>
-              <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Work / Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
+            <div class="category-card">
+              <div class="category-image">
+                <img
+                  src="./images/projects/group1.png"
+                  alt="Graphic Design Projects"
+                />
+              </div>
+              <h3>Graphic Design Projects</h3>
             </div>
 
-            <!-- Right: Contact Info -->
-            <div class="footer-contact">
-              <h4 class="footer-heading">Contact Info</h4>
-              <ul>
-                <li>
-                  <span class="label">Email:</span>
-                  <a href="mailto:jilliankyla@gmail.com"
-                    >jilliankyla@gmail.com</a
-                  >
-                </li>
-                <li>
-                  <span class="label">Phone / WhatsApp:</span>
-                  <a href="tel:+639515160444">+63 951 516 0444</a>
-                </li>
-                <li>
-                  <span class="label">Location:</span>
-                  Based in Philippines · Available worldwide
-                </li>
-              </ul>
+            <div class="category-card">
+              <div class="category-image">
+                <img
+                  src="./images/projects/group1.png"
+                  alt="Support/Assistant Works"
+                />
+              </div>
+              <h3>Support/Assistant Works</h3>
             </div>
-          </div>
 
-          <div class="footer-bottom">
-            <p>© 2026 Kylla Jen Beron. All rights reserved.</p>
-            <p>Designed by Kylla Jen Beron</p>
+            <div class="category-card">
+              <div class="category-image">
+                <img
+                  src="./images/projects/group1.png"
+                  alt="Front-end Development Projects"
+                />
+              </div>
+              <h3>Front-end Development Projects</h3>
+            </div>
+
+            <div class="category-card">
+              <div class="category-image">
+                <img src="./images/projects/group1.png" alt="Others" />
+              </div>
+              <h3>Others</h3>
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
+
+        <!-- Quote Section -->
+        <div class="quote-section fade-in">
+          <blockquote class="quote-text">
+            "One designer. Many disciplines."
+          </blockquote>
+          <p class="quote-description">
+            From brand identities to responsive websites and user interfaces —
+            these projects showcase how I bridge design and code. Every piece is
+            built with purpose, collaboration, and attention to detail.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-section" id="services">
+      <div class="services-container">
+        <div class="services-header fade-in">
+          <h2 class="services-title">Services</h2>
+          <p class="services-subtitle">
+            From brand identity to frontend development — I offer end-to-end
+            design solutions. No gaps. No handoff headaches.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service Card 1: Graphic Design / Brand Identity -->
+          <div class="service-card">
+            <h3 class="service-card-title">Graphic Design / Brand Identity</h3>
+
+            <div class="service-category">
+              <h4>Brand Foundations</h4>
+              <ul>
+                <li>Logo design & variations</li>
+                <li>Color palette & typography</li>
+                <li>Brand style guide</li>
+                <li>Visual identity system</li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h4>Print Materials</h4>
+              <ul>
+                <li>Business cards & letterheads</li>
+                <li>Flyers, brochures & posters</li>
+                <li>Packaging & labels</li>
+                <li>Menus, catalogs & lookbooks</li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h4>Digital Assets</h4>
+              <ul>
+                <li>Social media graphics</li>
+                <li>Presentation decks</li>
+                <li>Web banners & digital ads</li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h4>Event & Promotional</h4>
+              <ul>
+                <li>Invitations & tickets</li>
+                <li>Banners & signage</li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h4>Apparel & Outdoor</h4>
+              <ul>
+                <li>T-shirts & uniforms</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service Card 2: UX/UI Design -->
+          <div class="service-card">
+            <h3 class="service-card-title">UX/UI Design</h3>
+
+            <div class="service-category">
+              <h4>User Research & Strategy</h4>
+              <ul>
+                <li>User research & interviews</li>
+                <li>Competitor analysis</li>
+                <li>User personas & journey maps</li>
+                <li>Information architecture</li>
+                <li>User flow diagrams</li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h4>Design & Prototyping</h4>
+              <ul>
+                <li>Wireframing (low & high fidelity)</li>
+                <li>High-fidelity UI design</li>
+                <li>Interactive prototypes (Figma)</li>
+                <li>Responsive design (mobile, tablet, desktop)</li>
+                <li>Design systems & component libraries</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service Card 3: Support / Assistant -->
+          <div class="service-card">
+            <h3 class="service-card-title">Support / Assistant</h3>
+
+            <div class="service-category">
+              <h4>Project Coordination</h4>
+              <ul>
+                <li>Task & deadline tracking</li>
+                <li>Schedule & meeting coordination</li>
+                <li>Timeline management</li>
+                <li>Client communication & follow-ups</li>
+                <li>Pitch Proposal</li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h4>Asset & File Management</h4>
+              <ul>
+                <li>Design asset organization</li>
+                <li>File storage setup (Google Drive, Dropbox, Figma)</li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h4>Design Documentation</h4>
+              <ul>
+                <li>Style guide documentation</li>
+                <li>Export & format conversion</li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h4>Feedback & Revision Tracking</h4>
+              <ul>
+                <li>Client feedback collection & organization</li>
+                <li>Revision tracking</li>
+                <li>Quality assurance checks</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service Card 4: Front-end Development -->
+          <div class="service-card">
+            <h3 class="service-card-title">Front-end Development</h3>
+
+            <div class="service-category">
+              <h4>Website Development</h4>
+              <ul>
+                <li>Responsive websites (HTML/CSS/JS)</li>
+                <li>Landing pages & marketing sites</li>
+                <li>Mobile-first design implementation</li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h4>Components & Interactivity</h4>
+              <ul>
+                <li>Custom coded components</li>
+                <li>Interactive elements (hover, click, scroll effects)</li>
+                <li>Navigation menus & dropdowns</li>
+                <li>Forms & user input handling</li>
+              </ul>
+            </div>
+
+            <div class="service-category">
+              <h4>Deployment & Support</h4>
+              <ul>
+                <li>GitHub repository with clean commits</li>
+                <li>Post-launch support & updates</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="services-footer fade-in">
+          <div class="pricing-note">
+            <strong>Pricing Note:</strong>
+            <p>
+              Every project is unique. Contact me for a custom quote based on
+              your scope, timeline, and budget.
+            </p>
+          </div>
+          <button class="cta-button">
+            Let's talk about your project
+            <span class="arrow">→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="contact-container">
+        <div class="contact-header fade-in">
+          <h2 class="contact-title">Contact Me!</h2>
+          <p class="contact-subtitle">Let's build something cohesive.</p>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <div class="contact-form-card fade-in">
+            <h3 class="form-heading">Let's work together.</h3>
+            <p class="form-subtitle">
+              Have a project in mind? Questions about a collaboration? I'd love
+              to hear from you.
+            </p>
+
+            <form class="contact-form" action="#" method="POST">
+              <div class="form-group">
+                <label for="fullname">Full name</label>
+                <input
+                  type="text"
+                  id="fullname"
+                  name="fullname"
+                  placeholder="Your full name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your.email@example.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="projecttype">Project Type</label>
+                <select id="projecttype" name="projecttype" required>
+                  <option value="" disabled selected>
+                    Select a project type
+                  </option>
+                  <option value="branding">Branding / Brand Identity</option>
+                  <option value="web">Website Design</option>
+                  <option value="uxui">UX/UI Design</option>
+                  <option value="graphic">Graphic Design</option>
+                  <option value="frontend">Frontend Development</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell me about your project..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">SUBMIT</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer-section">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- Left: Brand Info -->
+          <div class="footer-brand">
+            <h3 class="footer-name">Kylla Jen Beron</h3>
+            <p class="footer-title">
+              Multidisciplinary Designer — Graphic Design · UX/UI · Frontend ·
+              Creative Support
+            </p>
+            <p class="footer-tagline">One designer. Many disciplines.</p>
+            <a href="#contact" class="footer-btn"
+              >Let's talk about your project</a
+            >
+          </div>
+
+          <!-- Middle: Quick Links -->
+          <div class="footer-links">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#projects">Work / Projects</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Right: Contact Info -->
+          <div class="footer-contact">
+            <h4 class="footer-heading">Contact Info</h4>
+            <ul>
+              <li>
+                <span class="label">Email:</span>
+                <a href="mailto:jilliankyla@gmail.com">jilliankyla@gmail.com</a>
+              </li>
+              <li>
+                <span class="label">Phone / WhatsApp:</span>
+                <a href="tel:+639515160444">+63 951 516 0444</a>
+              </li>
+              <li>
+                <span class="label">Location:</span>
+                Based in Philippines · Available worldwide
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Kylla Jen Beron. All rights reserved.</p>
+          <p>Designed by Kylla Jen Beron</p>
+        </div>
+      </div>
+    </footer>
 
     <script>
       // Smooth scrolling for navigation links
@@ -842,20 +845,26 @@
         });
       });
 
-      // Sticky navbar on scroll
+      // Sticky navbar on scroll + logo switching
       const navbar = document.getElementById("navbar");
+      const logoDefault = document.querySelector(".logo-default");
+      const logoScrolled = document.querySelector(".logo-scrolled");
 
       window.addEventListener("scroll", () => {
         if (window.pageYOffset > 100) {
           navbar.classList.add("scrolled");
+          if (logoDefault) logoDefault.style.display = "none";
+          if (logoScrolled) logoScrolled.style.display = "block";
         } else {
           navbar.classList.remove("scrolled");
+          if (logoDefault) logoDefault.style.display = "block";
+          if (logoScrolled) logoScrolled.style.display = "none";
         }
       });
 
       // Scroll Spy: Dynamic Active Navigation Links
-      const sections = document.querySelectorAll("section[id], main[id]");
-      const navLinks = document.querySelectorAll(".nav-links a");
+      const sections = document.querySelectorAll("section[id], .hero");
+      const navLinks = document.querySelectorAll(".nav-link");
 
       function updateActiveLink() {
         let current = "";
@@ -915,7 +924,7 @@
 
       // Mobile menu toggle
       const hamburger = document.getElementById("hamburger");
-      const navMenu = document.querySelector(".nav-links"); // Changed from navLinks to navMenu
+      const navMenu = document.querySelector(".nav-menu");
 
       hamburger.addEventListener("click", () => {
         navMenu.classList.toggle("active");
@@ -923,9 +932,9 @@
       });
 
       // Close mobile menu when clicking on a link
-      document.querySelectorAll(".nav-links a").forEach((link) => {
+      document.querySelectorAll(".nav-menu a").forEach((link) => {
         link.addEventListener("click", () => {
-          navMenu.classList.remove("active"); // Changed from navLinks to navMenu
+          navMenu.classList.remove("active");
           hamburger.classList.remove("active");
         });
       });
