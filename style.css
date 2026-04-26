@@ -1604,21 +1604,177 @@ body {
   }
 }
 
-/* Large Phones */
-@media (max-width: 768px) {
-  .section-title,
-  .section-title2 {
-    font-size: 36px;
+/* ========================================= */
+/*          MOBILE RESPONSIVE DESIGN         */
+/* ========================================= */
+
+@media (max-width: 968px) {
+  /* --- Navigation --- */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    padding: 100px 20px 40px;
+    gap: 25px;
+    justify-content: flex-start;
+    z-index: 999;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu a {
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .nav-cta {
+    display: none; /* Hide top CTA on mobile, it's in the content */
+  }
+
+  /* --- Hero Section --- */
+  .hero {
+    min-height: auto;
+    padding: 100px 20px 60px;
+    justify-content: flex-start;
+  }
+
+  .hero-bg-text {
+    font-size: clamp(60px, 15vw, 120px);
+    opacity: 0.1;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 auto;
     text-align: center;
   }
 
-  .hero {
-    max-height: 100vh;
-    min-height: 100vh;
+  .hero-image {
+    flex: none;
+    width: 100%;
+    max-width: 350px;
+    order: 1; /* Image on top */
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
   }
 
-  .services-title {
+  .hero-image img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    transform: none; /* Reset transform for mobile centering */
+    margin: 0;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+  }
+
+  .hero-card-side {
+    order: 2; /* Text below image */
+    width: 100%;
+  }
+
+  .hero-card {
+    padding: 40px 25px;
+    border-radius: 30px;
+  }
+
+  .welcome-badge {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    white-space: normal;
+    width: max-content;
+  }
+
+  .main-name {
     font-size: 42px;
+  }
+
+  .description {
+    font-size: 15px;
+    margin: 0 auto 30px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-white,
+  .btn-black {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .connect-pill {
+    position: static;
+    margin: 25px auto 0;
+  }
+
+  .hero-social-footer {
+    padding: 20px;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .hero-social-footer .social-link {
+    font-size: 12px;
+  }
+
+  /* --- General Section Layouts --- */
+  .about-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-image-card {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .stats-container {
+    justify-content: center;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 
   .services-grid {
@@ -1626,32 +1782,39 @@ body {
     gap: 20px;
   }
 
-  .quote-text {
-    font-size: 32px;
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
   }
 
-  .tools-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+  .footer-brand {
+    margin: 0 auto;
+  }
+
+  .footer-btn {
+    display: inline-block;
+  }
+
+  .services-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
   }
 }
 
-/* Small Phones */
-@media (max-width: 600px) {
+/* ========================================= */
+/*        SMALL MOBILE PHONES (< 480px)      */
+/* ========================================= */
+
+@media (max-width: 480px) {
   html {
     font-size: 14px;
-  }
-  .hero {
-    max-height: 100vh;
-    min-height: 100vh;
-  }
-
-  .hero-image {
-    display: none;
-  }
-
-  .hero-bg-text {
-    font-size: clamp(80px, 15vw, 180px);
   }
 
   .navbar,
@@ -1660,49 +1823,38 @@ body {
   }
 
   .hero {
-    padding: 80px 15px 60px;
+    padding: 90px 15px 40px;
+  }
+
+  .hero-image {
+    max-width: 280px;
+  }
+
+  .hero-image img {
+    max-width: 250px;
   }
 
   .hero-card {
-    padding: 30px 20px;
+    padding: 35px 20px;
+    border-radius: 25px;
   }
 
   .main-name {
-    font-size: 42px;
+    font-size: 34px;
   }
 
   .intro-text {
-    font-size: 22px;
+    font-size: 20px;
   }
 
-  .hero-btns {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .btn-white,
-  .btn-black {
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .social-footer {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 20px;
-  }
-
-  .projects-section,
-  .services-section,
-  .contact-section {
-    padding: 60px 20px;
+  .description {
+    font-size: 14px;
   }
 
   .section-title,
   .section-title2 {
     font-size: 28px;
-    margin-bottom: 30px;
+    text-align: center;
   }
 
   .categories-grid {
@@ -1710,22 +1862,6 @@ body {
   }
 
   .quote-text {
-    font-size: 26px;
-  }
-
-  .contact-title {
-    font-size: 32px;
-  }
-
-  .contact-form-card {
-    padding: 40px 25px;
-  }
-
-  .footer-section {
-    padding: 60px 20px 30px;
-  }
-
-  .footer-name {
     font-size: 24px;
   }
 
@@ -1737,34 +1873,12 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .stat-box {
-    min-width: calc(50% - 10px);
-  }
-}
-
-/* Extra Small Phones */
-@media (max-width: 320px) {
-  html {
-    font-size: 12px;
-  }
-  .hero {
-    min-height: 100vh;
+  .contact-form-card {
+    padding: 30px 20px;
   }
 
-  .hero-bg-text {
-    font-size: 60px;
-  }
-
-  .hero-image {
-    display: none;
-  }
-
-  .main-name {
-    font-size: 32px;
-  }
-
-  .hero-card {
-    padding: 25px 15px;
+  .footer-section {
+    padding: 50px 20px 30px;
   }
 }
 
