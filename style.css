@@ -151,6 +151,7 @@ body {
   font-size: 70px;
   margin-bottom: 20px;
   line-height: 1;
+  color: hsl(0, 0%, 0%);
 }
 
 .description {
@@ -216,6 +217,7 @@ body {
   text-decoration: none;
   font-size: 11px;
   opacity: 0.6;
+  text-decoration: underline;
 }
 
 .social-footer img {
