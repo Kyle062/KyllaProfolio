@@ -266,14 +266,16 @@ body {
   padding: 8px 20px;
   border-radius: 20px;
   display: inline-block;
+  color: black;
 }
 
 .about-description {
-  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
   line-height: 1.8;
   margin-bottom: 30px;
   opacity: 0.95;
-  max-width: 550px;
+  max-width: 600px;
 }
 
 .about-description strong {
@@ -289,7 +291,7 @@ body {
 
 .skill-tag {
   background: white;
-  color: #333;
+  color: #000000;
   padding: 10px 24px;
   border-radius: 25px;
   font-size: 14px;
@@ -304,7 +306,7 @@ body {
 }
 
 .stat-box {
-  background: rgba(255, 255, 255, 0.15);
+  background: #F1B2B3;
   backdrop-filter: blur(10px);
   padding: 20px 30px;
   border-radius: 15px;
@@ -316,6 +318,7 @@ body {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 5px;
+  color: black;
 }
 
 .stat-box p {
@@ -326,7 +329,7 @@ body {
 .stat-divider {
   width: 1px;
   height: 60px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 /* Image Card */
