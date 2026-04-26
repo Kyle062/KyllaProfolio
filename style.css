@@ -1473,7 +1473,7 @@ body {
   }
 
   .welcome-badge {
-    left: 50%;
+    left: 40%;
     transform: translateX(-50%) translateY(-50%);
     white-space: normal;
     width: max-content;
