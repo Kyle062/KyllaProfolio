@@ -1631,6 +1631,10 @@ body {
     font-size: 14px;
   }
 
+  .hero-image{
+    display: none;
+  }
+
   .hero-bg-text {
     font-size: clamp(80px, 15vw, 180px);
   }
@@ -1731,6 +1735,10 @@ body {
 
   .hero-bg-text {
     font-size: 60px;
+  }
+
+  .hero-image{
+    display: none;
   }
 
   .main-name {
