@@ -65,7 +65,7 @@ body {
 .nav-links a.active {
   opacity: 1;
   font-weight: 600;
-  border-bottom: 3px solid #FE4477;
+  border-bottom: 3px solid #fe4477;
 }
 
 .nav-links a:hover {
@@ -226,11 +226,10 @@ body {
   transform: translateY(4px);
 }
 
-
 /* About Me Section */
 .aboutme-section {
   padding: 100px 50px;
-  background: linear-gradient(135deg, #E8A19F, #F8C5B1 100%);
+  background: linear-gradient(135deg, #e8a19f, #f8c5b1 100%);
   position: relative;
 }
 
@@ -254,7 +253,7 @@ body {
 }
 
 .sparkle-icon {
-  color: #FFD700;
+  color: #ffd700;
   font-size: 20px;
 }
 
@@ -306,7 +305,7 @@ body {
 }
 
 .stat-box {
-  background: #F1B2B3;
+  background: #f1b2b3;
   backdrop-filter: blur(10px);
   padding: 20px 30px;
   border-radius: 15px;
@@ -377,19 +376,177 @@ body {
   .about-container {
     flex-direction: column;
   }
-  
+
   .about-image-card {
     flex: 1;
     width: 100%;
     max-width: 400px;
   }
-  
+
   .stats-container {
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .stat-divider {
     display: none;
+  }
+}
+
+/* Work Experience Section */
+.work-experience-section {
+  padding: 100px 50px;
+  background: linear-gradient(135deg, #e8a19f, #f8c5b1 100%);
+  position: relative;
+}
+
+.experience-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 35px 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  margin-bottom: 20px;
+}
+
+.date-range {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.company {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.job-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+.employment-type {
+  font-weight: 400;
+  color: #666;
+  font-size: 16px;
+}
+
+.responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibilities li {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.responsibilities li::before {
+  content: "•";
+  position: absolute;
+  left: 10px;
+  color: #f13d79;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.nested-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 10px 25px;
+}
+
+.nested-list li {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.nested-list li::before {
+  content: "‣";
+  position: absolute;
+  left: 5px;
+  color: #f13d79;
+}
+
+.responsibilities strong {
+  font-weight: 600;
+  color: #000;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .work-experience-section {
+    padding: 60px 25px;
+  }
+
+  .experience-card {
+    padding: 25px 30px;
+  }
+
+  .section-header h2 {
+    font-size: 26px;
+  }
+
+  .date-range {
+    font-size: 16px;
+  }
+
+  .job-title {
+    font-size: 18px;
+  }
+
+  .responsibilities li {
+    font-size: 14px;
+    padding-left: 20px;
   }
 }
