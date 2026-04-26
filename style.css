@@ -64,11 +64,60 @@ body {
   color: #000;
 }
 
+/* Logo Styles */
 .logo {
   font-size: 24px;
   font-weight: 300;
   letter-spacing: 5px;
   transition: color 0.3s ease;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+/* Default logo - visible at top */
+.logo-default {
+  display: block;
+  opacity: 1;
+  filter: brightness(0) invert(1); /* Makes it white */
+}
+
+/* Scrolled logo - hidden at top */
+.logo-scrolled {
+  display: none;
+  opacity: 0;
+  filter: brightness(1); /* Keep original colors or adjust as needed */
+}
+
+/* When navbar is scrolled */
+.nav-container.scrolled .logo-default {
+  display: none;
+  opacity: 0;
+}
+
+.nav-container.scrolled .logo-scrolled {
+  display: block;
+  opacity: 1;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Adjust logo size for scrolled state if needed */
+.nav-container.scrolled .logo img {
+  height: 35px; /* Slightly smaller when scrolled */
 }
 
 .nav-links {
@@ -78,6 +127,7 @@ body {
   gap: 30px;
 }
 
+/* Active link underline animation */
 .nav-links a {
   text-decoration: none;
   color: white;
@@ -88,7 +138,7 @@ body {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -96,6 +146,21 @@ body {
   height: 2px;
   background: #fe4477;
   transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* For scrolled state - adjust underline color */
+.nav-container.scrolled .nav-links a::after {
+  background: #fe4477;
 }
 
 .nav-links a:hover::after,
@@ -182,18 +247,8 @@ body {
 
 .person-img {
   height: 90vh;
-  margin-bottom: -2px;
+  margin-bottom: -15px;
   filter: drop-shadow(20px 10px 30px rgba(0, 0, 0, 0.2));
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
 }
 
 /* THE GLASS CARD */
@@ -238,7 +293,8 @@ body {
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -548,10 +604,7 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
-.experience-card.featured {
-  border: 2px solid #4a90e2;
-  background: rgba(255, 255, 255, 0.85);
-}
+
 
 .card-header {
   margin-bottom: 20px;
