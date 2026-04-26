@@ -1,3 +1,8 @@
+/* ========================================= */
+/*             DESKTOP STYLES                */
+/*      (Unchanged from your design)         */
+/* ========================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -232,7 +237,7 @@ body {
 .hero-image {
   flex: 0 0 45%;
   max-width: 600px;
-  overflow: visible; /* ✅ Allows image to bleed outside its box */
+  overflow: visible;
 }
 
 .hero-image img {
@@ -240,9 +245,9 @@ body {
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
-  transform: translate(-120px, 23px); /* Moves left 20px, down 23px */
-  display: block; /* ✅ Removes default inline spacing gaps */
-  will-change: transform; /* ✅ Optimizes rendering performance */
+  transform: translate(-120px, 23px);
+  display: block;
+  will-change: transform;
 }
 
 .hero-card {
@@ -432,77 +437,6 @@ body {
 .hero-social-footer .social-link:hover img {
   opacity: 1;
   transform: scale(1.1);
-}
-
-/* ========== RESPONSIVE FOR HERO SOCIAL FOOTER ========== */
-@media (max-width: 968px) {
-  .hero {
-    padding: 100px 20px 80px;
-    min-height: auto;
-    max-height: 100vh;
-    min-height: 100vh;
-  }
-
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .hero-image {
-    flex: none;
-    max-width: 400px;
-    order: 1;
-  }
-
-  .hero-card {
-    order: 2;
-    padding: 40px 30px;
-    max-width: 100%;
-  }
-
-  .hero-description {
-    max-width: 100%;
-  }
-
-  .hero-btns {
-    justify-content: center;
-  }
-
-  .connect-pill {
-    position: static;
-    margin: 20px auto 0;
-  }
-
-  .hero-social-footer {
-    position: static;
-    margin-top: 30px;
-    padding: 15px 20px;
-    gap: 30px;
-    background: rgba(0, 0, 0, 0.4);
-  }
-}
-
-@media (max-width: 600px) {
-  .hero {
-    max-height: 100vh;
-    min-height: 100vh;
-  }
-  .hero-social-footer {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 20px;
-  }
-
-  .hero-social-footer .social-link {
-    font-size: 10px;
-    justify-content: center;
-  }
-
-  .hero-social-footer .social-link img {
-    width: 16px;
-    height: 16px;
-  }
 }
 
 /* ========== FADE-IN ANIMATIONS ========== */
@@ -1461,153 +1395,11 @@ body {
   margin: 5px 0;
 }
 
-/* ========== RESPONSIVE BREAKPOINTS ========== */
-
-/* Tablets & Small Desktops */
-@media (max-width: 1199px) {
-  .featured-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .categories-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Tablets */
-@media (max-width: 968px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    flex-direction: column;
-    background: white;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-    padding: 100px 20px 20px;
-    gap: 20px;
-    justify-content: flex-start;
-  }
-
-  .nav-menu.active {
-    right: 0;
-  }
-
-  .nav-menu a {
-    color: #000;
-    font-size: 18px;
-  }
-
-  .nav-cta {
-    display: none;
-  }
-
-  .hero {
-    flex-direction: column;
-    padding: 100px 20px 80px;
-  }
-
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-image {
-    flex: none;
-    max-width: 400px;
-    order: 1;
-  }
-
-  .hero-card {
-    order: 2;
-    padding: 40px 30px;
-    max-width: 100%;
-  }
-
-  .hero-description {
-    max-width: 100%;
-  }
-
-  .hero-btns {
-    justify-content: center;
-  }
-
-  .connect-pill {
-    position: static;
-    margin: 20px auto 0;
-  }
-
-  .about-grid {
-    flex-direction: column;
-  }
-
-  .about-image-card {
-    flex: 1;
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .stats-container {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .stat-divider {
-    display: none;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tools-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .featured-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .categories-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
-
-  .footer-brand {
-    max-width: 100%;
-  }
-
-  .services-footer {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .cta-button {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
 /* ========================================= */
-/*          MOBILE RESPONSIVE DESIGN         */
+/*      MOBILE RESPONSIVE DESIGN START       */
 /* ========================================= */
 
+/* Tablets and Mobile Devices */
 @media (max-width: 968px) {
   /* --- Navigation --- */
   .hamburger {
@@ -1642,18 +1434,20 @@ body {
   }
 
   .nav-cta {
-    display: none; /* Hide top CTA on mobile, it's in the content */
+    display: none;
   }
 
   /* --- Hero Section --- */
   .hero {
-    min-height: auto;
     padding: 100px 20px 60px;
+    min-height: auto;
+    max-height: none; /* Allow content to grow */
     justify-content: flex-start;
   }
 
   .hero-bg-text {
     font-size: clamp(60px, 15vw, 120px);
+    top: 30%;
     opacity: 0.1;
   }
 
@@ -1664,19 +1458,18 @@ body {
     text-align: center;
   }
 
-  
-  .hero-image img {
-    display: none;
-  }
-
-  .hero-card-side {
-    order: 2; /* Text below image */
-    width: 100%;
+  /* Hide Hero Image on Tablet/Mobile as requested */
+  .hero-image {
+    display: none !important;
   }
 
   .hero-card {
+    order: 2;
+    width: 100%;
+    max-width: 100%;
     padding: 40px 25px;
     border-radius: 30px;
+    margin-top: 20px;
   }
 
   .welcome-badge {
@@ -1713,6 +1506,8 @@ body {
   }
 
   .hero-social-footer {
+    position: static;
+    margin-top: 30px;
     padding: 20px;
     gap: 20px;
     flex-direction: column;
@@ -1722,7 +1517,15 @@ body {
     font-size: 12px;
   }
 
-  /* --- General Section Layouts --- */
+  /* --- About + Experience Section --- */
+  .about-experience-section {
+    padding: 60px 20px;
+  }
+
+  .ae-container {
+    gap: 50px;
+  }
+
   .about-grid {
     flex-direction: column;
     gap: 40px;
@@ -1736,6 +1539,7 @@ body {
   }
 
   .stats-container {
+    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -1743,6 +1547,7 @@ body {
     display: none;
   }
 
+  /* --- Skills & Tools --- */
   .skills-grid {
     grid-template-columns: 1fr;
   }
@@ -1750,6 +1555,17 @@ body {
   .tools-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
+  }
+
+  /* --- Projects Section --- */
+  .projects-section {
+    padding: 60px 20px;
+  }
+
+  .section-title,
+  .section-title2 {
+    font-size: 36px;
+    text-align: center;
   }
 
   .featured-grid {
@@ -1762,9 +1578,44 @@ body {
     gap: 15px;
   }
 
+  /* --- Services Section --- */
+  .services-section {
+    padding: 60px 20px;
+  }
+
+  .services-title {
+    font-size: 42px;
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .services-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+    padding: 30px 20px;
+  }
+
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* --- Contact Section --- */
+  .contact-section {
+    padding: 60px 20px;
+  }
+
+  .contact-form-card {
+    padding: 40px 20px;
+  }
+
+  /* --- Footer --- */
+  .footer-section {
+    padding: 50px 20px 30px;
   }
 
   .footer-grid {
@@ -1776,27 +1627,9 @@ body {
   .footer-brand {
     margin: 0 auto;
   }
-
-  .footer-btn {
-    display: inline-block;
-  }
-
-  .services-footer {
-    flex-direction: column;
-    text-align: center;
-    gap: 25px;
-  }
-
-  .cta-button {
-    width: 100%;
-    justify-content: center;
-  }
 }
 
-/* ========================================= */
-/*        SMALL MOBILE PHONES (< 480px)      */
-/* ========================================= */
-
+/* Small Mobile Phones */
 @media (max-width: 480px) {
   html {
     font-size: 14px;
@@ -1808,19 +1641,11 @@ body {
   }
 
   .hero {
-    padding: 90px 15px 40px;
-  }
-
-  .hero-image {
-    display: none;
-  }
-
-  .hero-image img {
-    display: none; /* Hide image on very small screens for better performance */
+    padding: 80px 15px 40px;
   }
 
   .hero-card {
-    padding: 35px 20px;
+    padding: 30px 15px;
     border-radius: 25px;
   }
 
@@ -1832,14 +1657,9 @@ body {
     font-size: 20px;
   }
 
-  .description {
-    font-size: 14px;
-  }
-
   .section-title,
   .section-title2 {
     font-size: 28px;
-    text-align: center;
   }
 
   .categories-grid {
@@ -1850,66 +1670,11 @@ body {
     font-size: 24px;
   }
 
-  .services-title {
-    font-size: 36px;
-  }
-
   .tools-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .contact-form-card {
-    padding: 30px 20px;
-  }
-
-  .footer-section {
-    padding: 50px 20px 30px;
-  }
-}
-
-/* Landscape Mode */
-@media (max-height: 600px) and (orientation: landscape) {
-  .hero {
-    min-height: auto;
-    padding: 60px 20px;
-  }
-
-  .hero-image img {
-    height: 50vh;
-  }
-
-  .hero-card {
-    padding: 30px 25px;
-  }
-
-  .nav-menu {
-    padding: 80px 20px 20px;
-  }
-}
-
-/* Print Styles */
-@media print {
-  .navbar,
-  .social-footer,
-  .hamburger,
-  .connect-pill,
-  .hero-bg-text {
-    display: none;
-  }
-
-  body {
-    background: white;
-    color: black;
-  }
-
-  .hero-card,
-  .experience-card,
-  .skills-card,
-  .tools-card,
-  .service-card,
-  .category-card,
-  .contact-form-card {
-    box-shadow: none;
-    border: 1px solid #ddd;
+  .footer-name {
+    font-size: 24px;
   }
 }
