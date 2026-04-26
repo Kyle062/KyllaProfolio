@@ -1016,11 +1016,21 @@ body {
 }
 
 .section-title {
-  font-family: "Playfair Display", serif;
+  font-family: "Elsie", serif;
   font-size: 48px;
   font-weight: 700;
   color: #000;
   text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: -0.5px;
+}
+
+.section-title2 {
+  font-family: "Elsie", serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
   margin-bottom: 60px;
   letter-spacing: -0.5px;
 }
@@ -1055,7 +1065,6 @@ body {
   width: 100%;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   display: block;
 }
@@ -1077,7 +1086,6 @@ body {
 }
 
 .category-card {
-  background: white;
   border-radius: 20px;
   padding: 25px;
   text-align: center;
@@ -1121,7 +1129,7 @@ body {
 }
 
 .quote-text {
-  font-family: "Playfair Display", serif;
+  font-family: "Elsie", serif;
   font-size: 42px;
   font-weight: 700;
   color: #000;
