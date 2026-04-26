@@ -1664,24 +1664,9 @@ body {
     text-align: center;
   }
 
-  .hero-image {
-    flex: none;
-    width: 100%;
-    max-width: 350px;
-    order: 1; /* Image on top */
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    overflow: visible;
-  }
-
+  
   .hero-image img {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    transform: none; /* Reset transform for mobile centering */
-    margin: 0;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    display: none;
   }
 
   .hero-card-side {
@@ -1827,11 +1812,11 @@ body {
   }
 
   .hero-image {
-    max-width: 280px;
+    display: none;
   }
 
   .hero-image img {
-    max-width: 250px;
+    display: none; /* Hide image on very small screens for better performance */
   }
 
   .hero-card {
