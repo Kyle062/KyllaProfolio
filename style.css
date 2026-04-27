@@ -245,7 +245,7 @@ body {
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
-  transform: translate(-130px, 23px);
+  transform: translate(-120px, 43px); /* Adjusted to better fit the design left , top*/
   display: block;
   will-change: transform;
 }
