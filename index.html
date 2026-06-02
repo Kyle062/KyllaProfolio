@@ -21,7 +21,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navigation -->
     <nav class="navbar" id="navbar">
       <div class="nav-container">
         <div class="logo">
@@ -52,7 +51,6 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
       <div class="hero-bg-text">PORTFOLIO</div>
 
@@ -88,7 +86,6 @@
         </div>
       </div>
 
-      <!-- Social Footer Inside Hero -->
       <div class="hero-social-footer">
         <a
           href="https://www.linkedin.com/in/kylla-jen-beron-409979294/"
@@ -96,7 +93,6 @@
           class="social-link"
         >
           <img src="./images/links/linkin.png" alt="LinkedIn" />
-          
           <span>linkedin.com/in/kylla-jen-beron/</span>
         </a>
         <a
@@ -118,7 +114,6 @@
       </div>
     </section>
 
-    <!-- COMBINED ABOUT + EXPERIENCE + SKILLS SECTION -->
     <section class="about-experience-section" id="about">
       <div class="ae-container">
         <div class="ae-part about-part fade-in">
@@ -128,7 +123,6 @@
           </div>
 
           <div class="about-grid">
-            <!-- Left: Text Content -->
             <div class="about-text">
               <p class="about-description">
                 I am a <strong>multidisciplinary designer</strong> focused on
@@ -166,7 +160,6 @@
               </div>
             </div>
 
-            <!-- Right: Image Card -->
             <div class="about-image-card">
               <div class="image-wrapper">
                 <img
@@ -185,7 +178,6 @@
           </div>
         </div>
 
-        <!-- WORK EXPERIENCE PART -->
         <div class="ae-part experience-part fade-in">
           <div class="ae-header">
             <span class="sparkle-icon">✦</span>
@@ -193,7 +185,6 @@
           </div>
 
           <div class="experience-timeline">
-            <!-- Experience Card 1 -->
             <div class="experience-card">
               <div class="card-header">
                 <div class="date-range">March 2024 – September 2024</div>
@@ -223,7 +214,6 @@
               </ul>
             </div>
 
-            <!-- Experience Card 2 -->
             <div class="experience-card">
               <div class="card-header">
                 <div class="date-range">February 2024 – July 2024</div>
@@ -253,7 +243,6 @@
               </ul>
             </div>
 
-            <!-- Experience Card 3 -->
             <div class="experience-card">
               <div class="card-header">
                 <div class="date-range">October 2024 – present</div>
@@ -293,7 +282,6 @@
           </div>
         </div>
 
-        <!-- SKILLS & EXPERTISE PART -->
         <div class="ae-part skills-part fade-in">
           <div class="ae-header">
             <span class="sparkle-icon">✦</span>
@@ -301,7 +289,6 @@
           </div>
 
           <div class="skills-grid">
-            <!-- Left Card: Skills Categories -->
             <div class="skills-card">
               <div class="skill-category">
                 <h3>UX/UI Design</h3>
@@ -334,7 +321,6 @@
               </div>
             </div>
 
-            <!-- Right Card: Tools -->
             <div class="tools-card">
               <h3>Tools I Use</h3>
               <div class="tools-grid">
@@ -395,7 +381,6 @@
             </div>
           </div>
 
-          <!-- Resume Button -->
           <div class="resume-button-container">
             <button class="resume-btn">
               <img src="./images/tools/pdf.png" alt="PDF" />
@@ -407,50 +392,74 @@
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
     <section class="projects-section" id="projects">
       <div class="projects-container">
-        <!-- Featured Projects -->
         <div class="featured-projects fade-in">
           <h2 class="section-title">Featured Projects</h2>
 
           <div class="featured-grid">
-            <!-- Project 1: DepTrack & IskolarLAD -->
-            <div class="featured-item">
+            <div class="featured-item" onclick="toggleProject(this)">
               <div class="project-mockup">
                 <img
                   src="./images/projects/deptrack-iskolarlad.png"
-                  alt="DepTrack & IskolarLAD Login Screens"
+                  alt="DepTrack & IskolarAid Login Screens"
                   class="project-img"
                 />
+                <div class="project-overlay">
+                  <span class="category-badge">UX/UI DESIGN</span>
+                  <h3>DepTrack & IskolarAid</h3>
+                  <p>Two student-centered apps — DepTrack for academic monitoring and IskolarAid for scholarship management. Designed end-to-end UI in Figma with a focus on accessibility and clarity.</p>
+                  <div class="tech-tags">
+                    <span class="tech-pill">Figma</span>
+                    <span class="tech-pill">UX Research</span>
+                    <span class="tech-pill">Prototyping</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- Project 2: HKHighTech -->
-            <div class="featured-item">
+            <div class="featured-item" onclick="toggleProject(this)">
               <div class="project-mockup">
                 <img
                   src="./images/projects/hktech-mockup.png"
                   alt="HKHighTech Mobile App"
                   class="project-img"
                 />
+                <div class="project-overlay">
+                  <span class="category-badge">APP DESIGN</span>
+                  <h3>HKHighTech</h3>
+                  <p>A comprehensive mobile e-commerce experience designed for browsing and purchasing high-tech electronics seamlessly.</p>
+                  <div class="tech-tags">
+                    <span class="tech-pill">Figma</span>
+                    <span class="tech-pill">UI Design</span>
+                    <span class="tech-pill">Wireframing</span>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- Project 3: Premium Philippine Pineapple -->
-            <div class="featured-item">
+            <div class="featured-item" onclick="toggleProject(this)">
               <div class="project-mockup">
                 <img
                   src="./images/projects/pineapple-website.png"
                   alt="Premium Philippine Pineapple Website"
                   class="project-img"
                 />
+                <div class="project-overlay">
+                  <span class="category-badge">WEB DESIGN</span>
+                  <h3>Premium Pineapple</h3>
+                  <p>A modern, responsive landing page highlighting the export quality of premium Philippine pineapples with clean typography and imagery.</p>
+                  <div class="tech-tags">
+                    <span class="tech-pill">Webflow</span>
+                    <span class="tech-pill">HTML/CSS</span>
+                    <span class="tech-pill">Branding</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Projects Categories -->
         <div class="projects-categories fade-in">
           <h2 class="section-title2">Projects</h2>
 
@@ -458,7 +467,7 @@
             <div class="category-card">
               <div class="category-image">
                 <img
-                  src="./images/projects/group1.png"
+                  src="./images/projects/UX/hktech-mockup.png"
                   alt="UX/UI Design Projects"
                 />
               </div>
@@ -468,7 +477,7 @@
             <div class="category-card">
               <div class="category-image">
                 <img
-                  src="./images/projects/group1.png"
+                  src="./images/projects/Graphic Design Projects/GRAPHIC1.png"
                   alt="Graphic Design Projects"
                 />
               </div>
@@ -478,7 +487,7 @@
             <div class="category-card">
               <div class="category-image">
                 <img
-                  src="./images/projects/group1.png"
+                  src="./images/projects/Support and Assistant Works/SUPPORT1.png"
                   alt="Support/Assistant Works"
                 />
               </div>
@@ -488,7 +497,7 @@
             <div class="category-card">
               <div class="category-image">
                 <img
-                  src="./images/projects/group1.png"
+                  src="./images/projects/Front-end Development  Projects/FRONTEND1.png"
                   alt="Front-end Development Projects"
                 />
               </div>
@@ -497,14 +506,13 @@
 
             <div class="category-card">
               <div class="category-image">
-                <img src="./images/projects/group1.png" alt="Others" />
+                <img src="./images/projects/Others/OTHERS1.png" alt="Others" />
               </div>
               <h3>Others</h3>
             </div>
           </div>
         </div>
 
-        <!-- Quote Section -->
         <div class="quote-section fade-in">
           <blockquote class="quote-text">
             "One designer. Many disciplines."
@@ -518,7 +526,6 @@
       </div>
     </section>
 
-    <!-- SERVICES SECTION -->
     <section class="services-section" id="services">
       <div class="services-container">
         <div class="services-header fade-in">
@@ -530,7 +537,6 @@
         </div>
 
         <div class="services-grid">
-          <!-- Service Card 1: Graphic Design / Brand Identity -->
           <div class="service-card">
             <h3 class="service-card-title">Graphic Design / Brand Identity</h3>
 
@@ -579,7 +585,6 @@
             </div>
           </div>
 
-          <!-- Service Card 2: UX/UI Design -->
           <div class="service-card">
             <h3 class="service-card-title">UX/UI Design</h3>
 
@@ -606,7 +611,6 @@
             </div>
           </div>
 
-          <!-- Service Card 3: Support / Assistant -->
           <div class="service-card">
             <h3 class="service-card-title">Support / Assistant</h3>
 
@@ -647,7 +651,6 @@
             </div>
           </div>
 
-          <!-- Service Card 4: Front-end Development -->
           <div class="service-card">
             <h3 class="service-card-title">Front-end Development</h3>
 
@@ -696,7 +699,6 @@
       </div>
     </section>
 
-    <!-- CONTACT SECTION -->
     <section class="contact-section" id="contact">
       <div class="contact-container">
         <div class="contact-header fade-in">
@@ -712,7 +714,9 @@
               to hear from you.
             </p>
 
-            <form class="contact-form" action="#" method="POST">
+            <form class="contact-form" action="https://formsubmit.co/lilila110605@gmail.com" method="POST">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_subject" value="New Portfolio Message!">
               <div class="form-group">
                 <label for="fullname">Full name</label>
                 <input
@@ -768,11 +772,9 @@
       </div>
     </section>
 
-    <!-- FOOTER SECTION -->
     <footer class="footer-section">
       <div class="footer-container">
         <div class="footer-grid">
-          <!-- Left: Brand Info -->
           <div class="footer-brand">
             <h3 class="footer-name">Kylla Jen Beron</h3>
             <p class="footer-title">
@@ -785,7 +787,6 @@
             >
           </div>
 
-          <!-- Middle: Quick Links -->
           <div class="footer-links">
             <h4 class="footer-heading">Quick Links</h4>
             <ul>
@@ -797,7 +798,6 @@
             </ul>
           </div>
 
-          <!-- Right: Contact Info -->
           <div class="footer-contact">
             <h4 class="footer-heading">Contact Info</h4>
             <ul>
@@ -825,7 +825,10 @@
     </footer>
 
     <script>
-      // Smooth scrolling for navigation links
+      function toggleProject(element) {
+        element.classList.toggle('is-active');
+      }
+
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
@@ -844,7 +847,6 @@
         });
       });
 
-      // Sticky navbar on scroll + logo switching
       const navbar = document.getElementById("navbar");
       const logoDefault = document.querySelector(".logo-default");
       const logoScrolled = document.querySelector(".logo-scrolled");
@@ -861,7 +863,6 @@
         }
       });
 
-      // Scroll Spy: Dynamic Active Navigation Links
       const sections = document.querySelectorAll("section[id], .hero");
       const navLinks = document.querySelectorAll(".nav-link");
 
@@ -888,7 +889,6 @@
         });
       }
 
-      // Throttle scroll event for better performance
       let ticking = false;
       window.addEventListener("scroll", () => {
         if (!ticking) {
@@ -900,10 +900,8 @@
         }
       });
 
-      // Initial check on page load
       window.addEventListener("load", updateActiveLink);
 
-      // Intersection Observer for fade-in animations
       const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
@@ -921,7 +919,6 @@
         observer.observe(el);
       });
 
-      // Mobile menu toggle
       const hamburger = document.getElementById("hamburger");
       const navMenu = document.querySelector(".nav-menu");
 
@@ -930,7 +927,6 @@
         hamburger.classList.toggle("active");
       });
 
-      // Close mobile menu when clicking on a link
       document.querySelectorAll(".nav-menu a").forEach((link) => {
         link.addEventListener("click", () => {
           navMenu.classList.remove("active");
