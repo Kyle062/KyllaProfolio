@@ -1,5 +1,6 @@
 /* ========================================= */
 /*             DESKTOP STYLES                */
+/*        10/10 Portfolio Improvements       */
 /* ========================================= */
 
 * {
@@ -24,11 +25,39 @@ body {
   line-height: 1.6;
 }
 
-.container {
-  min-height: 100vh;
-  position: relative;
-  width: 100%;
-  overflow-x: hidden;
+/* ========== CUSTOM SCROLLBAR STYLING ========== */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f13d79, #ff6b8b);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff3366, #f13d79);
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #f13d79 rgba(0, 0, 0, 0.1);
+}
+
+/* ========== ACCESSIBILITY IMPROVEMENTS ========== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #f13d79;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 /* ========== NAVIGATION ========== */
@@ -61,6 +90,11 @@ body {
 
 .logo {
   z-index: 1001;
+}
+
+.logo a {
+  text-decoration: none;
+  display: block;
 }
 
 .logo img {
@@ -143,9 +177,9 @@ body {
 }
 
 .nav-cta {
-  background: white;
-  color: #000;
-  padding: 10px 24px;
+  background: white !important;
+  color: #000 !important;
+  padding: 10px 24px !important;
   border-radius: 50px;
   text-decoration: none;
   font-size: 14px;
@@ -155,8 +189,12 @@ body {
 }
 
 .nav-cta:hover {
-  background: #000;
-  color: white;
+  background: #000 !important;
+  color: white !important;
+}
+
+.nav-cta::after {
+  display: none !important;
 }
 
 /* Hamburger Menu */
@@ -167,6 +205,8 @@ body {
   gap: 5px;
   z-index: 1001;
   padding: 5px;
+  background: none;
+  border: none;
 }
 
 .hamburger span {
@@ -175,28 +215,28 @@ body {
   background: white;
   transition: all 0.3s ease;
   border-radius: 3px;
+  display: block;
 }
 
 .navbar.scrolled .hamburger span {
   background: black;
 }
 
-.hamburger.active span:nth-child(1) {
+.hamburger[aria-expanded="true"] span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
 
-.hamburger.active span:nth-child(2) {
+.hamburger[aria-expanded="true"] span:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger.active span:nth-child(3) {
+.hamburger[aria-expanded="true"] span:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* ========== HERO SECTION ========== */
 .hero {
   position: relative;
-  max-height: 100vh;
   min-height: 100vh;
   background: linear-gradient(135deg, #ff6b8b 0%, #f13d79 100%);
   display: flex;
@@ -246,7 +286,6 @@ body {
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
   transform: translate(-120px, 43px);
   display: block;
-  will-change: transform;
 }
 
 .hero-card {
@@ -289,8 +328,7 @@ body {
 }
 
 @keyframes bounce {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
   50% {
@@ -833,7 +871,7 @@ body {
   border: none;
   padding: 15px 30px;
   border-radius: 50px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
   font-size: 16px;
@@ -842,11 +880,13 @@ body {
   cursor: pointer;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .resume-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  color: #000;
 }
 
 .resume-btn img {
@@ -923,14 +963,13 @@ body {
   -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   color: #ffffff;
-
+  
   transform: translateY(100%);
   opacity: 0;
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s ease;
   box-sizing: border-box;
 }
 
-/* State when clicked (managed by JS) */
 .featured-item.is-active .project-overlay {
   transform: translateY(0);
   opacity: 1;
@@ -940,7 +979,6 @@ body {
   transform: scale(1.03);
 }
 
-/* Overlay Typography & Tags */
 .category-badge {
   background-color: #ff3366;
   color: #fff;
@@ -954,14 +992,14 @@ body {
 }
 
 .project-overlay h3 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   margin: 0 0 8px 0;
   color: #ffffff;
 }
 
 .project-overlay p {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.85rem;
   line-height: 1.5;
   color: #e0e0e0;
@@ -981,7 +1019,7 @@ body {
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.75rem;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .featured-projects {
@@ -1038,6 +1076,8 @@ body {
   transition: all 0.3s ease;
   cursor: pointer;
   background: white;
+  text-decoration: none;
+  display: block;
 }
 
 .category-card:hover {
@@ -1332,6 +1372,11 @@ body {
   color: #333;
 }
 
+.required {
+  color: #f13d79;
+  font-weight: bold;
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -1343,8 +1388,23 @@ body {
   color: #333;
   transition: all 0.3s ease;
 }
-/* ========== CUSTOM SCROLLBAR STYLING ========== */
-/* For Webkit browsers (Chrome, Safari, Edge) */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(241, 61, 121, 0.2);
+}
+
+.form-group textarea {
+  resize: none;
+  overflow-y: auto;
+  min-height: 120px;
+  max-height: 200px;
+}
+
+/* Custom scrollbar for textarea */
 .form-group textarea::-webkit-scrollbar {
   width: 8px;
 }
@@ -1367,48 +1427,67 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
-/* For Firefox */
 .form-group textarea {
   scrollbar-width: thin;
   scrollbar-color: #f13d79 rgba(255, 255, 255, 0.3);
 }
 
-/* Optional: Style the entire page scrollbar to match */
-body::-webkit-scrollbar {
-  width: 10px;
+/* Form validation styles */
+
+
+.form-group input.invalid,
+.form-group select.invalid,
+.form-group textarea.invalid {
+  border: 2px solid #f13d79 !important;
+  background: rgba(241, 61, 121, 0.05) !important;
+  animation: shake 0.3s ease-in-out;
+
 }
 
-body::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
+
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
 }
 
-body::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #f13d79, #ff6b8b);
-  border-radius: 10px;
+.error-message {
+  color: #f13d79;
+  font-size: 12px;
+  display: none;
+  margin-top: -5px;
 }
 
-body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #ff3366, #f13d79);
+.char-count {
+  font-size: 12px;
+  color: #666;
+  text-align: right;
+  margin-top: -2px;
 }
 
-/* For Firefox */
-body {
-  scrollbar-width: thin;
-  scrollbar-color: #f13d79 rgba(0, 0, 0, 0.1);
-}
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  background: white;
-  box-shadow: 0 0 0 3px rgba(241, 61, 121, 0.2);
+.form-feedback {
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+  margin-top: 10px;
 }
 
-.form-group textarea {
-  resize: none;
-  overflow-y: auto;
-  min-height: 120px;
-  max-height: 200px;
+.form-feedback.success {
+  background: rgba(76, 175, 80, 0.1);
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+  display: block;
+}
+
+.form-feedback.error {
+  background: rgba(241, 61, 121, 0.1);
+  color: #f13d79;
+  border: 1px solid #f13d79;
+  display: block;
 }
 
 .submit-btn {
@@ -1422,12 +1501,35 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
 .submit-btn:hover {
   background: #f13d79;
   transform: translateY(-2px);
   box-shadow: 0 10px 30px rgba(241, 61, 121, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-loader {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* ========== FOOTER SECTION ========== */
@@ -1548,13 +1650,40 @@ body {
   margin: 5px 0;
 }
 
+/* ========== PRINT STYLES ========== */
+@media print {
+  .navbar,
+  .hero-social-footer,
+  .hamburger,
+  .connect-pill,
+  .hero-btns {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .hero {
+    min-height: auto !important;
+    padding: 20px !important;
+  }
+  
+  .hero-card {
+    background: none !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
+
 /* ========================================= */
 /*      MOBILE RESPONSIVE DESIGN START       */
 /* ========================================= */
 
 /* Tablets and Mobile Devices */
 @media (max-width: 968px) {
-  /* --- Navigation --- */
   .hamburger {
     display: flex;
   }
@@ -1587,14 +1716,12 @@ body {
   }
 
   .nav-cta {
-    display: none;
+    display: inline-block !important;
   }
 
-  /* --- Hero Section --- */
   .hero {
     padding: 100px 20px 60px;
     min-height: auto;
-    max-height: none;
     justify-content: flex-start;
   }
 
@@ -1669,7 +1796,6 @@ body {
     font-size: 12px;
   }
 
-  /* --- About + Experience Section --- */
   .about-experience-section {
     padding: 60px 20px;
   }
@@ -1699,7 +1825,6 @@ body {
     display: none;
   }
 
-  /* --- Skills & Tools --- */
   .skills-grid {
     grid-template-columns: 1fr;
   }
@@ -1709,7 +1834,6 @@ body {
     gap: 15px;
   }
 
-  /* --- Projects Section --- */
   .projects-section {
     padding: 60px 20px;
   }
@@ -1730,7 +1854,6 @@ body {
     gap: 15px;
   }
 
-  /* --- Services Section --- */
   .services-section {
     padding: 60px 20px;
   }
@@ -1756,7 +1879,6 @@ body {
     justify-content: center;
   }
 
-  /* --- Contact Section --- */
   .contact-section {
     padding: 60px 20px;
   }
@@ -1765,7 +1887,6 @@ body {
     padding: 40px 20px;
   }
 
-  /* --- Footer --- */
   .footer-section {
     padding: 50px 20px 30px;
   }
