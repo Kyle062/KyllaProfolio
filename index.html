@@ -1,30 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Kylla Jen Beron - Multidisciplinary Designer specializing in UX/UI, Graphic Design, Frontend Development, and Creative Support"
+      content="Kylla Jen Beron - Multidisciplinary Designer"
     />
     <title>Kylla Jen Beron | Multidisciplinary Designer</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&family=Italiana&family=Elsie:wght@400;900&display=swap"
       rel="stylesheet"
     />
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- NAVIGATION -->
     <nav
       class="navbar"
       id="navbar"
@@ -34,32 +29,28 @@
       <div class="nav-container">
         <div class="logo">
           <a href="#home" aria-label="Kylla Jen Beron Home">
-            <img
-              src="./images/logo.png"
-              alt="Kylla Jen Beron Logo"
-              class="logo-default"
-            />
+            <img src="./images/logo.png" alt="Logo" class="logo-default" />
             <img
               src="./images/logo-scrolled.png"
-              alt="Kylla Jen Beron Logo"
+              alt="Logo scrolled"
               class="logo-scrolled"
             />
           </a>
         </div>
         <ul class="nav-menu" role="menubar">
-          <li role="none">
+          <li>
             <a href="#home" class="nav-link active" role="menuitem">Home</a>
           </li>
-          <li role="none">
+          <li>
             <a href="#about" class="nav-link" role="menuitem">About Me</a>
           </li>
-          <li role="none">
+          <li>
             <a href="#projects" class="nav-link" role="menuitem">Projects</a>
           </li>
-          <li role="none">
+          <li>
             <a href="#services" class="nav-link" role="menuitem">Services</a>
           </li>
-          <li role="none">
+          <li>
             <a href="#contact" class="nav-link nav-cta" role="menuitem"
               >Let's Connect</a
             >
@@ -71,17 +62,15 @@
           aria-label="Toggle menu"
           aria-expanded="false"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
     </nav>
 
     <main>
+      <!-- HERO -->
       <section class="hero" id="home" aria-label="Hero section">
         <div class="hero-bg-text" aria-hidden="true">PORTFOLIO</div>
-
         <div class="hero-container">
           <div class="hero-image">
             <img
@@ -90,13 +79,10 @@
               loading="eager"
             />
           </div>
-
           <div class="hero-card">
-            <div class="welcome-badge" aria-label="Welcome message">
-              <span class="sparkle" aria-hidden="true">✦</span> Welcome to my
-              portfolio!
+            <div class="welcome-badge">
+              <span aria-hidden="true">✦</span> Welcome to my portfolio!
             </div>
-
             <div class="hero-content">
               <p class="intro-text">Hello, I'm</p>
               <h1 class="main-name">Kylla Jen Beron</h1>
@@ -104,76 +90,48 @@
                 Your brand deserves consistency and work that feels intentional
                 across every medium. As a
                 <strong>multidisciplinary designer</strong>, I shape ideas that
-                move effortlessly from first click to final impression delivered
-                with clarity and purpose. Let's build something that doesn't
-                feel pieced together.
+                move effortlessly from first click to final impression.
               </p>
-
               <div class="hero-btns">
-                <a href="#projects" class="btn-white" aria-label="View my works"
+                <a href="#projects" class="btn-white"
                   >View my works <span aria-hidden="true">›</span></a
                 >
-                <a
-                  href="#about"
-                  class="btn-black"
-                  aria-label="Learn more about me"
-                  >Learn more about me</a
-                >
+                <a href="#about" class="btn-black">Learn more about me</a>
               </div>
             </div>
-
-            <a href="#contact" class="connect-pill" aria-label="Let's Connect"
+            <a href="#contact" class="connect-pill"
               >Let's Connect <span aria-hidden="true">→</span></a
             >
           </div>
         </div>
-
         <div class="hero-social-footer">
-          <a
-            href="https://www.linkedin.com/in/kylla-jen-beron-409979294/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-            aria-label="Visit LinkedIn profile"
+          <a href="#" target="_blank" class="social-link"
+            ><img src="./images/links/linkin.png" alt="" />
+            linkedin.com/in/kylla-jen-beron/</a
           >
-            <img src="./images/links/linkin.png" alt="" aria-hidden="true" />
-            <span>linkedin.com/in/kylla-jen-beron/</span>
-          </a>
-          <a
-            href="https://www.instagram.com/itsme_kakaay/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-            aria-label="Visit Instagram profile"
+          <a href="#" target="_blank" class="social-link"
+            ><img src="./images/links/instagram.png" alt="" />
+            instagram.com/itsme_kakaay/</a
           >
-            <img src="./images/links/instagram.png" alt="" aria-hidden="true" />
-            <span>instagram.com/itsme_kakaay/</span>
-          </a>
-          <a
-            href="https://www.facebook.com/kyllajen.beron.1"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="social-link"
-            aria-label="Visit Facebook profile"
+          <a href="#" target="_blank" class="social-link"
+            ><img src="./images/links/facebook.png" alt="" />
+            facebook.com/kyllajen.beron.1</a
           >
-            <img src="./images/links/facebook.png" alt="" aria-hidden="true" />
-            <span>facebook.com/kyllajen.beron.1</span>
-          </a>
         </div>
       </section>
 
+      <!-- ABOUT -->
       <section
         class="about-experience-section"
         id="about"
-        aria-label="About Me, Experience, and Skills"
+        aria-label="About Me"
       >
         <div class="ae-container">
           <div class="ae-part about-part fade-in">
             <div class="ae-header">
-              <span class="sparkle-icon" aria-hidden="true">✦</span>
+              <span class="sparkle-icon">✦</span>
               <h2>About Me</h2>
             </div>
-
             <div class="about-grid">
               <div class="about-text">
                 <p class="about-description">
@@ -181,11 +139,8 @@
                   delivering intentional work that translates seamlessly across
                   any format. By moving freely between visual identity, digital
                   experiences, print, and development, I ensure your brand
-                  remains consistent no matter where it lives. I do not limit
-                  myself to one discipline. I dedicate myself entirely to your
-                  project's success.
+                  remains consistent no matter where it lives.
                 </p>
-
                 <div class="skills-tags">
                   <span class="skill-tag">UX/UI Designer</span>
                   <span class="skill-tag">Graphic Designer</span>
@@ -193,50 +148,48 @@
                   <span class="skill-tag">Front-end Developer</span>
                   <span class="skill-tag">Creative Support</span>
                 </div>
-
                 <div class="stats-container">
                   <div class="stat-box">
                     <h3>2+</h3>
                     <p>Years of Experience</p>
                   </div>
-                  <div class="stat-divider" aria-hidden="true"></div>
+                  <div class="stat-divider"></div>
                   <div class="stat-box">
                     <h3>30+</h3>
                     <p>Clients</p>
                   </div>
-                  <div class="stat-divider" aria-hidden="true"></div>
+                  <div class="stat-divider"></div>
                   <div class="stat-box">
                     <h3>50+</h3>
                     <p>Projects Done</p>
                   </div>
                 </div>
               </div>
-
               <div class="about-image-card">
                 <div class="image-wrapper">
                   <img
                     src="./images/aboutmePhoto.png"
-                    alt="Kylla Jen Beron professional photo"
+                    alt="Kylla Jen Beron"
                     class="about-photo"
                     loading="lazy"
                   />
                 </div>
                 <div class="image-details">
                   <h3>Kylla Jen Beron</h3>
-                  <p class="student-info">BSIT 2nd Year Student</p>
-                  <p class="age-info">20 years old</p>
-                  <p class="location-info">Davao de Oro, Philippines</p>
+                  <p>BSIT 2nd Year Student</p>
+                  <p>20 years old</p>
+                  <p>Davao de Oro, Philippines</p>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- Experience -->
           <div class="ae-part experience-part fade-in">
             <div class="ae-header">
-              <span class="sparkle-icon" aria-hidden="true">✦</span>
+              <span class="sparkle-icon">✦</span>
               <h2>Work Experience</h2>
             </div>
-
             <div class="experience-timeline">
               <div class="experience-card">
                 <div class="card-header">
@@ -248,25 +201,14 @@
                   </div>
                 </div>
                 <ul class="responsibilities">
+                  <li>Designed print-ready graphics for custom merchandise</li>
+                  <li>Created brand assets including logos, t-shirt designs</li>
+                  <li>Collaborated with clients to translate ideas</li>
                   <li>
-                    Designed print-ready graphics for custom merchandise and
-                    promotional materials
-                  </li>
-                  <li>
-                    Created brand assets including logos, t-shirt designs, and
-                    marketing collaterals
-                  </li>
-                  <li>
-                    Collaborated with clients to translate ideas into
-                    production-ready designs
-                  </li>
-                  <li>
-                    Managed multiple design projects simultaneously under tight
-                    deadlines
+                    Managed multiple design projects under tight deadlines
                   </li>
                 </ul>
               </div>
-
               <div class="experience-card">
                 <div class="card-header">
                   <div class="date-range">February 2024 – July 2024</div>
@@ -277,25 +219,12 @@
                   </div>
                 </div>
                 <ul class="responsibilities">
-                  <li>
-                    Designed print-ready graphics for custom merchandise and
-                    promotional materials
-                  </li>
-                  <li>
-                    Created brand assets including logos, t-shirt designs, and
-                    marketing collaterals
-                  </li>
-                  <li>
-                    Collaborated with clients to translate ideas into
-                    production-ready designs
-                  </li>
-                  <li>
-                    Managed multiple design projects simultaneously under tight
-                    deadlines
-                  </li>
+                  <li>Designed print-ready graphics for custom merchandise</li>
+                  <li>Created brand assets including logos, t-shirt designs</li>
+                  <li>Collaborated with clients to translate ideas</li>
+                  <li>Managed multiple design projects simultaneously</li>
                 </ul>
               </div>
-
               <div class="experience-card">
                 <div class="card-header">
                   <div class="date-range">October 2024 – present</div>
@@ -311,7 +240,7 @@
                     <ul class="nested-list">
                       <li>
                         Worked with 50+ clients across startups, small
-                        businesses, and agencies (international and local)
+                        businesses, and agencies
                       </li>
                     </ul>
                   </li>
@@ -335,12 +264,12 @@
             </div>
           </div>
 
+          <!-- Skills -->
           <div class="ae-part skills-part fade-in">
             <div class="ae-header">
-              <span class="sparkle-icon" aria-hidden="true">✦</span>
+              <span class="sparkle-icon">✦</span>
               <h2>Skills & Expertise</h2>
             </div>
-
             <div class="skills-grid">
               <div class="skills-card">
                 <div class="skill-category">
@@ -373,7 +302,6 @@
                   </p>
                 </div>
               </div>
-
               <div class="tools-card">
                 <h3>Tools I Use</h3>
                 <div class="tools-grid">
@@ -382,80 +310,70 @@
                       src="./images/tools/figma.png"
                       alt="Figma"
                       loading="lazy"
-                    />
-                    <span>Figma</span>
+                    /><span>Figma</span>
                   </div>
                   <div class="tool-item">
                     <img
                       src="./images/tools/framer.png"
                       alt="Framer"
                       loading="lazy"
-                    />
-                    <span>Framer</span>
+                    /><span>Framer</span>
                   </div>
                   <div class="tool-item">
                     <img
                       src="./images/tools/photoshop.png"
-                      alt="Adobe Photoshop"
+                      alt="Photoshop"
                       loading="lazy"
-                    />
-                    <span>Adobe Photoshop</span>
+                    /><span>Adobe Photoshop</span>
                   </div>
                   <div class="tool-item">
                     <img
                       src="./images/tools/illustrator.png"
-                      alt="Adobe Illustrator"
+                      alt="Illustrator"
                       loading="lazy"
-                    />
-                    <span>Adobe Illustrator</span>
+                    /><span>Adobe Illustrator</span>
                   </div>
                   <div class="tool-item">
                     <img
                       src="./images/tools/canva.png"
                       alt="Canva"
                       loading="lazy"
-                    />
-                    <span>Canva</span>
+                    /><span>Canva</span>
                   </div>
                   <div class="tool-item">
                     <img
                       src="./images/tools/capcut.png"
                       alt="Capcut"
                       loading="lazy"
-                    />
-                    <span>Capcut</span>
+                    /><span>Capcut</span>
                   </div>
                   <div class="tool-item">
                     <img
                       src="./images/tools/github.png"
                       alt="GitHub"
                       loading="lazy"
-                    />
-                    <span>GitHub</span>
+                    /><span>GitHub</span>
                   </div>
                   <div class="tool-item">
                     <img
                       src="./images/tools/vscode.png"
                       alt="VSCode"
                       loading="lazy"
-                    />
-                    <span>VSCode</span>
+                    /><span>VSCode</span>
                   </div>
                   <div class="tool-item">
                     <img
                       src="./images/tools/office.png"
-                      alt="Microsoft Office"
+                      alt="Office"
                       loading="lazy"
-                    />
-                    <span>Microsoft Office</span>
+                    /><span>Microsoft Office</span>
                   </div>
-                  <div class="tool-item google-workspace">
+                  <div class="tool-item">
                     <img
                       src="./images/tools/Google Workspace.png"
                       alt="Google Workspace"
                       loading="lazy"
-                    />
-                    <span>Google Workspace</span>
+                    /><span>Google Workspace</span>
                   </div>
                 </div>
                 <div class="others-section">
@@ -464,23 +382,18 @@
                 </div>
               </div>
             </div>
-
             <div class="resume-button-container">
-              <a
-                href="./resume.pdf"
-                target="_blank"
-                class="resume-btn"
-                aria-label="View my resume (PDF)"
+              <a href="./resume.pdf" target="_blank" class="resume-btn"
+                ><img src="./images/tools/pdf.png" alt="" /><span
+                  >View my Resume</span
+                ><span class="arrow">›</span></a
               >
-                <img src="./images/tools/pdf.png" alt="" aria-hidden="true" />
-                <span>View my Resume</span>
-                <span class="arrow" aria-hidden="true">›</span>
-              </a>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- PROJECTS -->
       <section
         class="projects-section"
         id="projects"
@@ -489,7 +402,6 @@
         <div class="projects-container">
           <div class="featured-projects fade-in">
             <h2 class="section-title">Featured Projects</h2>
-
             <div class="featured-grid">
               <div
                 class="featured-item"
@@ -497,12 +409,11 @@
                 tabindex="0"
                 role="button"
                 aria-expanded="false"
-                aria-label="DepTrack & IskolarAid project details"
               >
                 <div class="project-mockup">
                   <img
                     src="./images/projects/deptrack-iskolarlad.png"
-                    alt="DepTrack & IskolarAid Login Screens"
+                    alt="DepTrack & IskolarAid"
                     class="project-img"
                     loading="lazy"
                   />
@@ -510,32 +421,28 @@
                     <span class="category-badge">UX/UI DESIGN</span>
                     <h3>DepTrack & IskolarAid</h3>
                     <p>
-                      Two student-centered apps — DepTrack for academic
-                      monitoring and IskolarAid for scholarship management.
-                      Designed end-to-end UI in Figma with a focus on
-                      accessibility and clarity.
+                      Two student-centered apps for academic monitoring and
+                      scholarship management.
                     </p>
                     <div class="tech-tags">
-                      <span class="tech-pill">Figma</span>
-                      <span class="tech-pill">UX Research</span>
-                      <span class="tech-pill">Prototyping</span>
+                      <span class="tech-pill">Figma</span
+                      ><span class="tech-pill">UX Research</span
+                      ><span class="tech-pill">Prototyping</span>
                     </div>
                   </div>
                 </div>
               </div>
-
               <div
                 class="featured-item"
                 onclick="toggleProject(this)"
                 tabindex="0"
                 role="button"
                 aria-expanded="false"
-                aria-label="HKHighTech project details"
               >
                 <div class="project-mockup">
                   <img
                     src="./images/projects/hktech-mockup.png"
-                    alt="HKHighTech Mobile App"
+                    alt="HKHighTech"
                     class="project-img"
                     loading="lazy"
                   />
@@ -543,30 +450,27 @@
                     <span class="category-badge">APP DESIGN</span>
                     <h3>HKHighTech</h3>
                     <p>
-                      A comprehensive mobile e-commerce experience designed for
-                      browsing and purchasing high-tech electronics seamlessly.
+                      Mobile e-commerce experience for high-tech electronics.
                     </p>
                     <div class="tech-tags">
-                      <span class="tech-pill">Figma</span>
-                      <span class="tech-pill">UI Design</span>
-                      <span class="tech-pill">Wireframing</span>
+                      <span class="tech-pill">Figma</span
+                      ><span class="tech-pill">UI Design</span
+                      ><span class="tech-pill">Wireframing</span>
                     </div>
                   </div>
                 </div>
               </div>
-
               <div
                 class="featured-item"
                 onclick="toggleProject(this)"
                 tabindex="0"
                 role="button"
                 aria-expanded="false"
-                aria-label="Premium Pineapple project details"
               >
                 <div class="project-mockup">
                   <img
                     src="./images/projects/pineapple-website.png"
-                    alt="Premium Philippine Pineapple Website"
+                    alt="Premium Pineapple"
                     class="project-img"
                     loading="lazy"
                   />
@@ -574,14 +478,12 @@
                     <span class="category-badge">WEB DESIGN</span>
                     <h3>Premium Pineapple</h3>
                     <p>
-                      A modern, responsive landing page highlighting the export
-                      quality of premium Philippine pineapples with clean
-                      typography and imagery.
+                      Responsive landing page for premium Philippine pineapples.
                     </p>
                     <div class="tech-tags">
-                      <span class="tech-pill">Webflow</span>
-                      <span class="tech-pill">HTML/CSS</span>
-                      <span class="tech-pill">Branding</span>
+                      <span class="tech-pill">Webflow</span
+                      ><span class="tech-pill">HTML/CSS</span
+                      ><span class="tech-pill">Branding</span>
                     </div>
                   </div>
                 </div>
@@ -591,73 +493,48 @@
 
           <div class="projects-categories fade-in">
             <h2 class="section-title2">Projects</h2>
-
             <div class="categories-grid">
-              <a
-                href="#"
-                class="category-card"
-                aria-label="View UX/UI Design Projects"
-              >
+              <a href="#" class="category-card" data-category="uxui">
                 <div class="category-image">
                   <img
                     src="./images/projects/UX/hktech-mockup.png"
-                    alt="UX/UI Design Projects"
+                    alt="UX/UI"
                     loading="lazy"
                   />
                 </div>
                 <h3>UX/UI Design Projects</h3>
               </a>
-
-              <a
-                href="#"
-                class="category-card"
-                aria-label="View Graphic Design Projects"
-              >
+              <a href="#" class="category-card" data-category="graphic">
                 <div class="category-image">
                   <img
                     src="./images/projects/Graphic Design Projects/GRAPHIC1.png"
-                    alt="Graphic Design Projects"
+                    alt="Graphic"
                     loading="lazy"
                   />
                 </div>
                 <h3>Graphic Design Projects</h3>
               </a>
-
-              <a
-                href="#"
-                class="category-card"
-                aria-label="View Support/Assistant Works"
-              >
+              <a href="#" id="support-works-trigger" class="category-card">
                 <div class="category-image">
                   <img
                     src="./images/projects/Support and Assistant Works/SUPPORT1.png"
-                    alt="Support/Assistant Works"
+                    alt="Support"
                     loading="lazy"
                   />
                 </div>
                 <h3>Support/Assistant Works</h3>
               </a>
-
-              <a
-                href="#"
-                class="category-card"
-                aria-label="View Front-end Development Projects"
-              >
+              <a href="#" class="category-card" data-category="frontend">
                 <div class="category-image">
                   <img
                     src="./images/projects/Front-end Development  Projects/FRONTEND1.png"
-                    alt="Front-end Development Projects"
+                    alt="Frontend"
                     loading="lazy"
                   />
                 </div>
                 <h3>Front-end Development Projects</h3>
               </a>
-
-              <a
-                href="#"
-                class="category-card"
-                aria-label="View Other Projects"
-              >
+              <a href="#" class="category-card" data-category="others">
                 <div class="category-image">
                   <img
                     src="./images/projects/Others/OTHERS1.png"
@@ -683,6 +560,7 @@
         </div>
       </section>
 
+      <!-- SERVICES -->
       <section
         class="services-section"
         id="services"
@@ -696,13 +574,11 @@
               design solutions. No gaps. No handoff headaches.
             </p>
           </div>
-
           <div class="services-grid">
             <div class="service-card">
               <h3 class="service-card-title">
                 Graphic Design / Brand Identity
               </h3>
-
               <div class="service-category">
                 <h4>Brand Foundations</h4>
                 <ul>
@@ -712,7 +588,6 @@
                   <li>Visual identity system</li>
                 </ul>
               </div>
-
               <div class="service-category">
                 <h4>Print Materials</h4>
                 <ul>
@@ -722,7 +597,6 @@
                   <li>Menus, catalogs & lookbooks</li>
                 </ul>
               </div>
-
               <div class="service-category">
                 <h4>Digital Assets</h4>
                 <ul>
@@ -731,26 +605,9 @@
                   <li>Web banners & digital ads</li>
                 </ul>
               </div>
-
-              <div class="service-category">
-                <h4>Event & Promotional</h4>
-                <ul>
-                  <li>Invitations & tickets</li>
-                  <li>Banners & signage</li>
-                </ul>
-              </div>
-
-              <div class="service-category">
-                <h4>Apparel & Outdoor</h4>
-                <ul>
-                  <li>T-shirts & uniforms</li>
-                </ul>
-              </div>
             </div>
-
             <div class="service-card">
               <h3 class="service-card-title">UX/UI Design</h3>
-
               <div class="service-category">
                 <h4>User Research & Strategy</h4>
                 <ul>
@@ -761,22 +618,19 @@
                   <li>User flow diagrams</li>
                 </ul>
               </div>
-
               <div class="service-category">
                 <h4>Design & Prototyping</h4>
                 <ul>
                   <li>Wireframing (low & high fidelity)</li>
                   <li>High-fidelity UI design</li>
                   <li>Interactive prototypes (Figma)</li>
-                  <li>Responsive design (mobile, tablet, desktop)</li>
+                  <li>Responsive design</li>
                   <li>Design systems & component libraries</li>
                 </ul>
               </div>
             </div>
-
             <div class="service-card">
               <h3 class="service-card-title">Support / Assistant</h3>
-
               <div class="service-category">
                 <h4>Project Coordination</h4>
                 <ul>
@@ -787,36 +641,24 @@
                   <li>Pitch Proposal</li>
                 </ul>
               </div>
-
               <div class="service-category">
                 <h4>Asset & File Management</h4>
                 <ul>
                   <li>Design asset organization</li>
-                  <li>File storage setup (Google Drive, Dropbox, Figma)</li>
+                  <li>File storage setup</li>
                 </ul>
               </div>
-
-              <div class="service-category">
-                <h4>Design Documentation</h4>
-                <ul>
-                  <li>Style guide documentation</li>
-                  <li>Export & format conversion</li>
-                </ul>
-              </div>
-
               <div class="service-category">
                 <h4>Feedback & Revision Tracking</h4>
                 <ul>
-                  <li>Client feedback collection & organization</li>
+                  <li>Client feedback collection</li>
                   <li>Revision tracking</li>
                   <li>Quality assurance checks</li>
                 </ul>
               </div>
             </div>
-
             <div class="service-card">
               <h3 class="service-card-title">Front-end Development</h3>
-
               <div class="service-category">
                 <h4>Website Development</h4>
                 <ul>
@@ -825,27 +667,24 @@
                   <li>Mobile-first design implementation</li>
                 </ul>
               </div>
-
               <div class="service-category">
                 <h4>Components & Interactivity</h4>
                 <ul>
                   <li>Custom coded components</li>
-                  <li>Interactive elements (hover, click, scroll effects)</li>
+                  <li>Interactive elements</li>
                   <li>Navigation menus & dropdowns</li>
                   <li>Forms & user input handling</li>
                 </ul>
               </div>
-
               <div class="service-category">
                 <h4>Deployment & Support</h4>
                 <ul>
-                  <li>GitHub repository with clean commits</li>
+                  <li>GitHub repository</li>
                   <li>Post-launch support & updates</li>
                 </ul>
               </div>
             </div>
           </div>
-
           <div class="services-footer fade-in">
             <div class="pricing-note">
               <strong>Pricing Note:</strong>
@@ -854,21 +693,20 @@
                 your scope, timeline, and budget.
               </p>
             </div>
-            <a href="#contact" class="cta-button">
-              Let's talk about your project
-              <span class="arrow" aria-hidden="true">→</span>
-            </a>
+            <a href="#contact" class="cta-button"
+              >Let's talk about your project <span class="arrow">→</span></a
+            >
           </div>
         </div>
       </section>
 
+      <!-- CONTACT -->
       <section class="contact-section" id="contact" aria-label="Contact form">
         <div class="contact-container">
           <div class="contact-header fade-in">
             <h2 class="contact-title">Contact Me!</h2>
             <p class="contact-subtitle">Let's build something cohesive.</p>
           </div>
-
           <div class="contact-form-wrapper">
             <div class="contact-form-card fade-in">
               <h3 class="form-heading">Let's work together.</h3>
@@ -876,7 +714,6 @@
                 Have a project in mind? Questions about a collaboration? I'd
                 love to hear from you.
               </p>
-
               <form
                 class="contact-form"
                 id="contactForm"
@@ -891,11 +728,9 @@
                   value="New Portfolio Message!"
                 />
                 <input type="hidden" name="_template" value="table" />
-
                 <div class="form-group">
                   <label for="fullname"
-                    >Full name
-                    <span class="required" aria-hidden="true">*</span></label
+                    >Full name <span class="required">*</span></label
                   >
                   <input
                     type="text"
@@ -903,19 +738,12 @@
                     name="fullname"
                     placeholder="Your full name"
                     required
-                    aria-required="true"
                   />
-                  <span
-                    class="error-message"
-                    id="fullname-error"
-                    role="alert"
-                  ></span>
+                  <span class="error-message" id="fullname-error"></span>
                 </div>
-
                 <div class="form-group">
                   <label for="email"
-                    >Email
-                    <span class="required" aria-hidden="true">*</span></label
+                    >Email <span class="required">*</span></label
                   >
                   <input
                     type="email"
@@ -923,26 +751,14 @@
                     name="email"
                     placeholder="your.email@example.com"
                     required
-                    aria-required="true"
                   />
-                  <span
-                    class="error-message"
-                    id="email-error"
-                    role="alert"
-                  ></span>
+                  <span class="error-message" id="email-error"></span>
                 </div>
-
                 <div class="form-group">
                   <label for="projecttype"
-                    >Project Type
-                    <span class="required" aria-hidden="true">*</span></label
+                    >Project Type <span class="required">*</span></label
                   >
-                  <select
-                    id="projecttype"
-                    name="projecttype"
-                    required
-                    aria-required="true"
-                  >
+                  <select id="projecttype" name="projecttype" required>
                     <option value="" disabled selected>
                       Select a project type
                     </option>
@@ -953,17 +769,11 @@
                     <option value="frontend">Frontend Development</option>
                     <option value="other">Other</option>
                   </select>
-                  <span
-                    class="error-message"
-                    id="projecttype-error"
-                    role="alert"
-                  ></span>
+                  <span class="error-message" id="projecttype-error"></span>
                 </div>
-
                 <div class="form-group">
                   <label for="message"
-                    >Message
-                    <span class="required" aria-hidden="true">*</span></label
+                    >Message <span class="required">*</span></label
                   >
                   <textarea
                     id="message"
@@ -971,25 +781,17 @@
                     rows="5"
                     placeholder="Tell me about your project..."
                     required
-                    aria-required="true"
                   ></textarea>
                   <div class="form-footer">
-                    <span
-                      class="error-message"
-                      id="message-error"
-                      role="alert"
-                    ></span>
+                    <span class="error-message" id="message-error"></span>
                     <span class="char-count" id="char-count">0/500</span>
                   </div>
                 </div>
-
                 <div
                   class="form-feedback"
                   id="form-feedback"
                   role="alert"
-                  aria-live="polite"
                 ></div>
-
                 <button type="submit" class="submit-btn" id="submit-btn">
                   <span class="btn-text">SUBMIT</span>
                   <span class="btn-loader" aria-hidden="true"></span>
@@ -1001,6 +803,7 @@
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer-section" role="contentinfo">
       <div class="footer-container">
         <div class="footer-grid">
@@ -1015,7 +818,6 @@
               >Let's talk about your project</a
             >
           </div>
-
           <div class="footer-links">
             <h4 class="footer-heading">Quick Links</h4>
             <ul>
@@ -1026,7 +828,6 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
-
           <div class="footer-contact">
             <h4 class="footer-heading">Contact Info</h4>
             <ul>
@@ -1039,13 +840,12 @@
                 <a href="tel:+639515160444">+63 951 516 0444</a>
               </li>
               <li>
-                <span class="label">Location:</span>
-                Based in Philippines · Available worldwide
+                <span class="label">Location:</span> Based in Philippines ·
+                Available worldwide
               </li>
             </ul>
           </div>
         </div>
-
         <div class="footer-bottom">
           <p>© 2026 Kylla Jen Beron. All rights reserved.</p>
           <p>Designed by Kylla Jen Beron</p>
@@ -1053,6 +853,33 @@
       </div>
     </footer>
 
+    <!-- ===== MODAL (Support/Assistant) ===== -->
+    <div id="support-modal" class="custom-modal">
+      <div class="modal-content glass-panel">
+        <span class="close-btn">&times;</span>
+        <div class="modal-header">
+          <h2>Support & Assistant Works</h2>
+          <p>
+            A showcase of my organizational, task management, and administrative
+            support skills.
+          </p>
+        </div>
+        <div class="modal-gallery" id="support-gallery"></div>
+      </div>
+    </div>
+
+    <!-- ===== LIGHTBOX (Image Pop-up) ===== -->
+    <div id="lightbox" class="lightbox">
+      <span class="lightbox-close" id="lightbox-close">&times;</span>
+      <img
+        id="lightbox-img"
+        class="lightbox-content"
+        src=""
+        alt="Enlarged view"
+      />
+    </div>
+
+    <!-- External JavaScript -->
     <script src="script.js"></script>
   </body>
 </html>
