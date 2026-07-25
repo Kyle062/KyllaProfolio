@@ -460,7 +460,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // ===== SMOOTH SCROLL WITH PREVENTING BLINK =====
+  // ===== SMOOTH SCROLL (FIXED - Custom smooth scroll animation) =====
+  function smoothScrollTo(target, offset = 100) {
+    const targetPosition =
+      target.getBoundingClientRect().top + window.pageYOffset - offset;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 800;
+    let startTime = null;
+
+    function animation(currentTime) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+
+      // Ease in-out cubic function for smooth animation
+      const ease =
+        progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+      window.scrollTo(0, startPosition + distance * ease);
+
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animation);
+      }
+    }
+
+    requestAnimationFrame(animation);
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
@@ -477,22 +506,11 @@ document.addEventListener("DOMContentLoaded", function () {
           document.body.style.overflow = "";
         }
 
-        // Get the target position with offset for fixed header
-        const headerOffset = 100;
-        const elementPosition = target.getBoundingClientRect().top;
-        const offsetPosition =
-          elementPosition + window.pageYOffset - headerOffset;
-
-        // Use smooth scroll with a slight delay to prevent blink
-        setTimeout(() => {
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth",
-          });
-        }, 50);
-
         // Update URL hash without causing scroll jump
         history.pushState(null, null, targetId);
+
+        // Use custom smooth scroll
+        smoothScrollTo(target, 100);
       }
     });
   });
