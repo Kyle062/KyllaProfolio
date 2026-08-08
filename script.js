@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const card = document.createElement("div");
       card.className = "gallery-card";
 
-      // Glassmorphism folder tag for modern UI aesthetic
       const folderTag =
         item.type === "folder"
           ? `<div style="position:absolute; top:12px; right:12px; background:rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color:#222; padding:6px 12px; border-radius:8px; font-size:12px; font-weight:700; border: 1px solid rgba(255,255,255,0.4); box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 2;">📁 Folder</div>`
@@ -88,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
         e.stopPropagation();
 
         if (item.type === "folder") {
-          // It's a folder: Save current state, update headers, and render subData
           const modalHeader = modal.querySelector(".modal-header h2");
           const modalDesc = modal.querySelector(".modal-header p");
 
@@ -98,12 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
             data: data,
           };
 
-          // Update the header with back button while keeping title centered
           updateModalHeader(item.title, item.desc, currentParentState);
-
           buildGallery(item.subData, currentParentState);
         } else {
-          // It's an image: Open lightbox
           const img = this.querySelector("img");
           openLightbox(img.src, img.alt);
         }
@@ -112,18 +107,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ===== UPDATE MODAL HEADER WITH BACK BUTTON (Centered Title) =====
+  // ===== UPDATE MODAL HEADER WITH BACK BUTTON =====
   function updateModalHeader(title, desc, parentCategory = null) {
     const modalHeader = modal.querySelector(".modal-header");
-
-    // Clear existing header content
     modalHeader.innerHTML = "";
 
     if (parentCategory) {
       modalHeader.innerHTML = `
-        <!-- Top row: Back button (left) + Title (center) -->
         <div style="display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 8px;">
-          <!-- Back button - positioned absolutely on the left -->
           <div style="
             position: absolute;
             left: 0;
@@ -152,26 +143,21 @@ document.addEventListener("DOMContentLoaded", function () {
             </svg>
             <span>Back</span>
           </div>
-          <!-- Centered Title -->
           <h2 style="margin: 0; font-size: 2rem; color: #1a1a1a; font-family: 'Playfair Display', serif; text-align: center;">${title}</h2>
         </div>
-        <!-- Centered Description -->
         <p style="color: #555; font-size: 1rem; margin: 0; text-align: center;">${desc}</p>
       `;
 
-      // Add click event to back button
       const backBtn = modalHeader.querySelector(
         'div[style*="cursor: pointer"]',
       );
       if (backBtn) {
         backBtn.addEventListener("click", () => {
-          // Reset header without back button
           resetModalHeader(parentCategory.title, parentCategory.desc);
           buildGallery(parentCategory.data, null);
         });
       }
     } else {
-      // Regular header without back button (centered)
       modalHeader.innerHTML = `
         <h2 style="margin: 0 0 5px 0; font-size: 2rem; color: #1a1a1a; font-family: 'Playfair Display', serif; text-align: center;">${title}</h2>
         <p style="color: #555; font-size: 1rem; margin: 0; text-align: center;">${desc}</p>
@@ -188,7 +174,6 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
   }
 
-  // Build initial support gallery on load (hidden until clicked)
   buildGallery(supportData);
 
   if (supportCard && modal && closeBtn) {
@@ -410,15 +395,37 @@ document.addEventListener("DOMContentLoaded", function () {
       const info = categoryMap[category];
       if (!info) return;
 
-      // Reset header without back button (centered)
       resetModalHeader(info.title, info.desc);
-
-      // Reset to root level of the selected category
       buildGallery(info.data, null);
 
       modal.classList.add("show");
       document.body.style.overflow = "hidden";
     });
+  });
+
+  // ===== CERTIFICATES LIGHTBOX =====
+  const certificateItems = document.querySelectorAll(".certificate-item");
+
+  certificateItems.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      const img = this.querySelector(".certificate-img");
+      if (img) {
+        const src = img.getAttribute("src");
+        const alt = img.getAttribute("alt") || "Certificate";
+        openLightbox(src, alt);
+      }
+    });
+
+    item.addEventListener("keypress", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        this.click();
+      }
+    });
+
+    item.setAttribute("tabindex", "0");
+    item.setAttribute("role", "button");
+    item.setAttribute("aria-label", "View certificate full screen");
   });
 
   // ===== LIGHTBOX =====
@@ -460,7 +467,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // ===== SMOOTH SCROLL (FIXED - Custom smooth scroll animation) =====
+  // ===== SMOOTH SCROLL =====
   function smoothScrollTo(target, offset = 100) {
     const targetPosition =
       target.getBoundingClientRect().top + window.pageYOffset - offset;
@@ -474,7 +481,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const timeElapsed = currentTime - startTime;
       const progress = Math.min(timeElapsed / duration, 1);
 
-      // Ease in-out cubic function for smooth animation
       const ease =
         progress < 0.5
           ? 4 * progress * progress * progress
@@ -496,7 +502,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetId = this.getAttribute("href");
       const target = document.querySelector(targetId);
       if (target) {
-        // Close mobile menu if open
         const navMenu = document.querySelector(".nav-menu");
         const hamburger = document.getElementById("hamburger");
         if (navMenu && navMenu.classList.contains("active")) {
@@ -506,10 +511,7 @@ document.addEventListener("DOMContentLoaded", function () {
           document.body.style.overflow = "";
         }
 
-        // Update URL hash without causing scroll jump
         history.pushState(null, null, targetId);
-
-        // Use custom smooth scroll
         smoothScrollTo(target, 100);
       }
     });

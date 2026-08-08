@@ -22,12 +22,10 @@ body {
   color: white;
   position: relative;
   line-height: 1.6;
-  /* Hide scrollbar but keep scrolling */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* Hide scrollbar for Chrome, Safari, Edge */
 body::-webkit-scrollbar {
   display: none;
   width: 0;
@@ -35,7 +33,6 @@ body::-webkit-scrollbar {
   background: transparent;
 }
 
-/* Accessibility */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -47,7 +44,6 @@ textarea:focus-visible,
   border-radius: 4px;
 }
 
-/* ===== FADE-IN ===== */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -897,7 +893,7 @@ textarea:focus-visible,
 }
 
 .projects-categories {
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 .categories-grid {
   display: grid;
@@ -937,6 +933,98 @@ textarea:focus-visible,
   font-weight: 600;
   color: #000;
   line-height: 1.4;
+}
+
+/* ===== CERTIFICATES SECTION ===== */
+.certificates-section {
+  margin-bottom: 80px;
+  padding: 0 20px;
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.certificate-item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.certificate-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+}
+
+.certificate-mockup {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.certificate-img {
+  width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  background: #f5f5f5;
+}
+
+.certificate-item:hover .certificate-img {
+  transform: scale(1.02);
+}
+
+.certificate-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.certificate-item:hover .certificate-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.cert-badge {
+  font-size: 20px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.certificate-overlay h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin: 0 0 4px 0;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.certificate-overlay p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  font-weight: 300;
+}
+
+/* No decorative elements - keep it minimal */
+.certificate-mockup::before,
+.certificate-mockup::after {
+  display: none;
 }
 
 .quote-section {
@@ -996,12 +1084,10 @@ textarea:focus-visible,
   color: #333;
   transform: scale(0.95);
   transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-  /* Hide scrollbar but keep scrolling */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* Hide scrollbar for modal */
 .modal-content.glass-panel::-webkit-scrollbar {
   display: none;
   width: 0;
@@ -1394,12 +1480,10 @@ textarea:focus-visible,
   overflow-y: auto;
   min-height: 120px;
   max-height: 200px;
-  /* Hide scrollbar but keep scrolling */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* Hide scrollbar for textarea */
 .form-group textarea::-webkit-scrollbar {
   display: none;
   width: 0;
@@ -1750,6 +1834,15 @@ textarea:focus-visible,
     gap: 15px;
   }
 
+  .certificates-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .certificate-img {
+    height: 220px;
+  }
+
   .services-section {
     padding: 60px 20px;
   }
@@ -1823,6 +1916,16 @@ textarea:focus-visible,
   .categories-grid {
     grid-template-columns: 1fr;
   }
+
+  .certificates-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .certificate-img {
+    height: 200px;
+  }
+
   .quote-text {
     font-size: 24px;
   }
