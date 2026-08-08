@@ -345,7 +345,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
           img: "./images/Displayprojects/Frontend/website1.png",
           title: "Philippines Tourism Website",
-          desc: "A modern tourism website showcasing the Philippines' destinations, culture, and natural beauty through an elegant, Apple-inspired user interface.",
+          desc: "A modern tourism website showcasing the Philippines' destinations, culture, and natural beauty through an elegant, Apple inspired user interface.",
         },
         {
           img: "./images/Displayprojects/Frontend/website3.png",
