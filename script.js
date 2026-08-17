@@ -231,10 +231,12 @@ document.addEventListener("DOMContentLoaded", function () {
         {
           img: "./images/Displayprojects/UXUI/mobileUI/KhighTect.png",
           title: "KhighTech Mobile App",
-          desc: "Intuitive mobile user interface design and layout.",
+          desc: "Intuitive mobile user interface design and layout for mobile e-commerce app.",
         },
         {
-          
+          img: "./images/Displayprojects/UXUI/mobileUI/AgriyaPH.png",
+          title: "AgriyaPH Mobile app",
+          desc: "Intuitive mobile user interface design and layout for farmers app."
         },
       ],
     },
