@@ -233,6 +233,9 @@ document.addEventListener("DOMContentLoaded", function () {
           title: "KhighTech Mobile App",
           desc: "Intuitive mobile user interface design and layout.",
         },
+        {
+          
+        },
       ],
     },
 
