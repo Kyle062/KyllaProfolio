@@ -229,7 +229,7 @@ document.addEventListener("DOMContentLoaded", function () {
           desc: "Comprehensive debt management system interface design.",
         },
         {
-          img: "./images/Displayprojects/UXUI/mobileUI/KhighTect.png",
+          img: "./images/Displayprojects/UXUI/mobileUI/KhighTech Mockup.png",
           title: "KhighTech Mobile App",
           desc: "Intuitive mobile user interface design and layout for mobile e-commerce app.",
         },
