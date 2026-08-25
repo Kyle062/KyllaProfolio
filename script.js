@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
           desc: "Modern and visually engaging mobile interface design for the Aromic application.",
         },
         {
-          img: "./images/Displayprojects/UXUI/mobileUI/Closelyt. Mockup.png",
+          img: "./images/Displayprojects/UXUI/mobileUI/Closetly. Mockup.png",
           title: "Closelyt Mobile App",
           desc: "Clean and user-friendly mobile interface design for the Closelyt application.",
         },
