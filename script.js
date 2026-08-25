@@ -236,7 +236,17 @@ document.addEventListener("DOMContentLoaded", function () {
         {
           img: "./images/Displayprojects/UXUI/mobileUI/AgriyaPH.png",
           title: "AgriyaPH Mobile app",
-          desc: "Intuitive mobile user interface design and layout for farmers app."
+          desc: "Intuitive mobile user interface design and layout for farmers app.",
+        },
+        {
+          img: "./images/Displayprojects/UXUI/mobileUI/Aromic Mockup.png",
+          title: "Aromic Mobile App",
+          desc: "Modern and visually engaging mobile interface design for the Aromic application.",
+        },
+        {
+          img: "./images/Displayprojects/UXUI/mobileUI/Closelyt. Mockup.png",
+          title: "Closelyt Mobile App",
+          desc: "Clean and user-friendly mobile interface design for the Closelyt application.",
         },
       ],
     },
